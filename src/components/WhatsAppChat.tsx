@@ -1,11 +1,30 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import type { Lang } from '@/lib/i18n'
 
-export function WhatsAppChat() {
+const CONTENT = {
+  pl: {
+    status: 'dostępny teraz',
+    message: 'Cześć! 👋 Mogę sprawdzić ile możesz zaoszczędzić na prądzie lub gazie w Niemczech.',
+    cta: 'Napisz do mnie — odpowiem w kilka minut.',
+    button: 'Napisz na WhatsApp',
+    prefill: 'Cześć Patryk, chcę sprawdzić ile mogę zaoszczędzić na energii.',
+  },
+  ua: {
+    status: 'доступний зараз',
+    message: 'Привіт! 👋 Можу перевірити скільки ти можеш заощадити на електриці або газі в Німеччині.',
+    cta: 'Напиши мені — відповім за кілька хвилин.',
+    button: 'Написати у WhatsApp',
+    prefill: 'Привіт Patryk, хочу перевірити скільки можу заощадити на енергії.',
+  },
+}
+
+export function WhatsAppChat({ lang }: { lang: Lang }) {
   const [visible, setVisible] = useState(false)
   const [closed, setClosed] = useState(false)
   const waNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER
+  const c = CONTENT[lang]
 
   useEffect(() => {
     const timer = setTimeout(() => setVisible(true), 7000)
@@ -16,7 +35,6 @@ export function WhatsAppChat() {
 
   return (
     <div className="fixed bottom-24 right-4 z-50 w-[min(288px,calc(100vw-2rem))] animate-fadeInUp">
-      {/* Bubble */}
       <div className="relative rounded-2xl border border-white/10 bg-[#0d1b3e]/95 p-4 shadow-[0_16px_48px_rgba(0,0,0,0.6)] backdrop-blur-xl">
         {/* Close */}
         <button
@@ -35,31 +53,31 @@ export function WhatsAppChat() {
             <p className="text-xs font-bold">Patryk Kuklinski</p>
             <div className="flex items-center gap-1">
               <span className="h-1.5 w-1.5 rounded-full bg-wa" />
-              <p className="text-[10px] text-white/50">dostępny teraz</p>
+              <p className="text-[10px] text-white/50">{c.status}</p>
             </div>
           </div>
         </div>
 
         {/* Message bubble */}
         <div className="mb-3 rounded-xl rounded-tl-none bg-white/8 px-3.5 py-2.5 text-xs leading-relaxed text-white/80">
-          Cześć! 👋 Mogę sprawdzić ile możesz zaoszczędzić na prądzie lub gazie w Niemczech.
+          {c.message}
           <br /><br />
-          <span className="text-gold font-semibold">Napisz do mnie — odpowiem w kilka minut.</span>
+          <span className="text-gold font-semibold">{c.cta}</span>
         </div>
 
         {/* CTA */}
         <a
-          href={`https://wa.me/${waNumber}?text=Cześć Patryk, chcę sprawdzić ile mogę zaoszczędzić na energii.`}
+          href={`https://wa.me/${waNumber}?text=${encodeURIComponent(c.prefill)}`}
           target="_blank"
           rel="noopener noreferrer"
           className="flex w-full items-center justify-center gap-2 rounded-xl bg-wa py-2.5 text-xs font-bold text-white transition hover:brightness-110"
         >
           <span className="text-base">💬</span>
-          Napisz na WhatsApp
+          {c.button}
         </a>
       </div>
 
-      {/* Arrow pointing to WA button */}
+      {/* Arrow */}
       <div className="absolute -bottom-2 right-8 h-3 w-3 rotate-45 border-b border-r border-white/10 bg-[#0d1b3e]/95" />
     </div>
   )

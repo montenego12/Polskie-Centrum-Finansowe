@@ -37,7 +37,7 @@ export default async function Home({ params }: Props) {
       </main>
       <Footer t={t.footer} />
       <StickyWhatsApp />
-      <WhatsAppChat />
+      <WhatsAppChat lang={lang} />
       <WeatherWidget />
     </>
   )
