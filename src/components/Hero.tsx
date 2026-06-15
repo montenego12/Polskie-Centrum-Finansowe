@@ -6,7 +6,7 @@ interface HeroProps { t: Translations['hero']; tForm: Translations['form']; lang
 
 export function Hero({ t, tForm, lang }: HeroProps) {
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(135deg,#0a0f1e_0%,#0d1b3e_50%,#0a1628_100%)] bg-[length:400%_400%] animate-gradientShift px-6 py-20 md:px-12 md:py-28 min-h-[90vh] flex items-center">
+    <section className="relative overflow-hidden bg-[linear-gradient(135deg,#0a0f1e_0%,#0d1b3e_50%,#0a1628_100%)] bg-[length:400%_400%] animate-gradientShift px-6 pt-10 pb-16 md:px-12 md:pt-14 md:pb-20 min-h-[80vh] flex items-start">
       {/* Orbs */}
       <div className="absolute -top-24 -right-24 h-[500px] w-[500px] rounded-full bg-brand opacity-15 blur-[80px] animate-orbFloat" />
       <div className="absolute bottom-0 left-[10%] h-[400px] w-[400px] rounded-full bg-gold opacity-[0.08] blur-[80px] animate-orbFloat [animation-delay:-4s]" />
