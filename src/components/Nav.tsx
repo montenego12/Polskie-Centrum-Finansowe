@@ -41,7 +41,7 @@ export function Nav({ t, lang }: NavProps) {
                   l === lang ? 'bg-gold text-dark' : 'text-white/50 hover:text-white'
                 }`}
               >
-                {l === 'pl' ? '🇵🇱 PL' : '🇺🇦 UA'}
+                {l === 'pl' ? 'PL' : 'UA'}
               </button>
             ))}
           </div>
