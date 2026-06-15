@@ -14,7 +14,7 @@ export const pl: Translations = {
   },
   hero: {
     badge: 'Doradztwo finansowe · Rynek energetyczny w Niemczech',
-    title: 'Płacisz za dużo za prąd lub gaz',
+    title: 'Płacisz zbyt dużo za prąd lub gaz',
     titleAccent: 'w Niemczech?',
     subtitle: 'Doradzam w wyborze najlepszej oferty energetycznej i pomagam zaoszczędzić nawet',
     checks: [
