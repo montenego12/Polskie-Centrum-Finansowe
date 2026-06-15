@@ -13,8 +13,8 @@ function makeRequest(path: string, cookie?: string) {
 describe('middleware', () => {
   it('redirects / to /pl', async () => {
     const res = await middleware(makeRequest('/'))
-    expect(res.status).toBe(307)
-    expect(res.headers.get('location')).toBe('http://localhost/pl')
+    expect(res!.status).toBe(307)
+    expect(res!.headers.get('location')).toBe('http://localhost/pl')
   })
 
   it('redirects /ua to /ua (no redirect needed)', async () => {
@@ -24,8 +24,8 @@ describe('middleware', () => {
 
   it('redirects /admin without cookie to /admin/login', async () => {
     const res = await middleware(makeRequest('/admin'))
-    expect(res.status).toBe(307)
-    expect(res.headers.get('location')).toContain('/admin/login')
+    expect(res!.status).toBe(307)
+    expect(res!.headers.get('location')).toContain('/admin/login')
   })
 
   it('allows /admin with valid cookie', async () => {
