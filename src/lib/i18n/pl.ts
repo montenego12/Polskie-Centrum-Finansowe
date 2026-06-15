@@ -61,7 +61,7 @@ export const pl: Translations = {
     quote: 'Pomagam mieszkańcom Niemiec płacić mniej za energię. Prosto, w ich języku, bez ukrytych kosztów.',
     desc: 'Jako doradca finansowy specjalizuję się w doborze spersonalizowanych ofert energetycznych dla klientów indywidualnych na rynku niemieckim. Analizuję Twoją sytuację, porównuję dostępne taryfy i prowadzę Cię przez cały proces — w Twoim języku, bez ukrytych kosztów.',
     benefits: [
-      { icon: '💰', title: 'Bezpłatna analiza', desc: 'Zarabiam prowizję od dostawcy, nie od Ciebie' },
+      { icon: '💰', title: 'Bezpłatna analiza', desc: 'Usługa doradcza w 100% bezpłatna dla klienta' },
       { icon: '🗣️', title: 'Obsługa w Twoim języku', desc: 'Zero barier językowych przy podpisaniu' },
       { icon: '⚡', title: 'Szybka realizacja', desc: 'Średnio 2–4 tygodnie, bez przerwy w dostawie' },
       { icon: '🔒', title: 'Zero ukrytych kosztów', desc: 'Widzisz dokładnie co i ile płacisz' },
@@ -98,7 +98,7 @@ export const pl: Translations = {
     label: 'FAQ',
     title: 'Często pytacie',
     items: [
-      { q: 'Czy to naprawdę bezpłatne?', a: 'Tak. Zarabiam prowizję od dostawcy energii, nie od Ciebie. Dla Ciebie cały proces jest 100% darmowy.' },
+      { q: 'Czy to naprawdę bezpłatne?', a: 'Tak. Usługa doradcza jest w 100% bezpłatna dla klienta. Nie pobieramy żadnych opłat od Ciebie.' },
       { q: 'Jak długo trwa cały proces?', a: 'Zazwyczaj 2–4 tygodnie. Nowy dostawca sam powiadamia poprzedniego — Ty nie musisz nic robić.' },
       { q: 'Czy podczas zmiany będę bez prądu?', a: 'Nie. To tylko zmiana na papierze — prąd płynie cały czas bez żadnych przerw.' },
       { q: 'Czy mogę zmienić ofertę w trakcie umowy?', a: 'Sprawdzimy razem warunki Twojej umowy. Często można wyjść bez kary lub z bardzo małą opłatą.' },
