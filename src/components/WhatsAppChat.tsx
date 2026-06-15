@@ -15,7 +15,7 @@ export function WhatsAppChat() {
   if (closed || !visible) return null
 
   return (
-    <div className="fixed bottom-24 right-6 z-50 w-72 animate-fadeInUp">
+    <div className="fixed bottom-24 right-4 z-50 w-[min(288px,calc(100vw-2rem))] animate-fadeInUp">
       {/* Bubble */}
       <div className="relative rounded-2xl border border-white/10 bg-[#0d1b3e]/95 p-4 shadow-[0_16px_48px_rgba(0,0,0,0.6)] backdrop-blur-xl">
         {/* Close */}

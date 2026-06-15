@@ -15,6 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = getTranslations(lang)
 
   return {
+    metadataBase: new URL('https://tanipradwniemczech.de'),
     title: t.meta.title,
     description: t.meta.description,
     alternates: {

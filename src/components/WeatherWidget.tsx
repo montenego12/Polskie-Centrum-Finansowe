@@ -90,7 +90,7 @@ export function WeatherWidget() {
   const timeStr = now.toLocaleTimeString('pl-DE', { hour: '2-digit', minute: '2-digit' })
 
   return (
-    <div className="fixed bottom-6 left-6 z-40 w-56 animate-fadeInUp select-none">
+    <div className="fixed bottom-6 left-6 z-40 hidden w-56 animate-fadeInUp select-none md:block">
       <div className="relative rounded-2xl border border-white/10 bg-[#0d1b3e]/90 p-4 shadow-[0_16px_48px_rgba(0,0,0,0.5)] backdrop-blur-xl">
         {/* Close */}
         <button
