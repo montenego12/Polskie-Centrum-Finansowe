@@ -3,7 +3,7 @@ import type { Translations } from './types'
 export const pl: Translations = {
   meta: {
     title: 'Tani Prąd w Niemczech — Zaoszczędź do 300 € rocznie',
-    description: 'Bezpłatna analiza rachunku za prąd i gaz w Niemczech. Zmieniamy dostawcę w Twoim języku. Partner Teleson GmbH.',
+    description: 'Bezpłatne doradztwo finansowe w zakresie energii w Niemczech. Dobieramy spersonalizowaną ofertę w Twoim języku. Partner Teleson GmbH.',
   },
   nav: {
     howItWorks: 'Jak to działa',
@@ -13,14 +13,14 @@ export const pl: Translations = {
     whatsapp: 'WhatsApp',
   },
   hero: {
-    badge: 'Doradztwo energetyczne w Niemczech',
+    badge: 'Doradztwo finansowe · Rynek energetyczny w Niemczech',
     title: 'Płacisz za dużo za prąd lub gaz',
     titleAccent: 'w Niemczech?',
-    subtitle: 'Pomagam zmienić dostawcę energii i zaoszczędzić nawet',
+    subtitle: 'Doradzam w wyborze najlepszej oferty energetycznej i pomagam zaoszczędzić nawet',
     checks: [
-      'Bezpłatna analiza Twojego rachunku',
-      'Obsługa w języku ojczystym',
-      'Zmiana bez przerwy w dostawie prądu',
+      'Bezpłatna analiza i spersonalizowane doradztwo',
+      'Obsługa w języku ojczystym — bez barier',
+      'Płynne przejście — bez przerwy w dostawach',
       'Partner Teleson GmbH — sprawdzona firma',
     ],
     formTitle: 'Sprawdź ile możesz zaoszczędzić',
@@ -39,7 +39,7 @@ export const pl: Translations = {
   },
   stats: [
     { value: '300 €', label: 'średnia oszczędność rocznie' },
-    { value: '2–4 tyg.', label: 'czas zmiany dostawcy' },
+    { value: '2–4 tyg.', label: 'czas realizacji' },
     { value: '100%', label: 'bezpłatna usługa' },
     { value: '0', label: 'ukrytych kosztów' },
   ],
@@ -49,9 +49,9 @@ export const pl: Translations = {
     title: '4 proste kroki',
     steps: [
       { icon: '📄', title: 'Wyślij rachunek', desc: 'Zrób zdjęcie lub prześlij PDF rachunku za prąd lub gaz przez formularz lub WhatsApp.' },
-      { icon: '🔍', title: 'Porównujemy oferty', desc: 'Analizujemy Twój rachunek i sprawdzamy najlepsze stawki dostępne w Niemczech.' },
-      { icon: '✍️', title: 'Podpisujesz umowę', desc: 'Pomagam Ci przejść przez cały proces w Twoim języku. Bez barier, bez stresu.' },
-      { icon: '💰', title: 'Zaczynasz oszczędzać', desc: 'Nawet 300 € mniej rocznie. Nowy dostawca sam powiadamia poprzedniego.' },
+      { icon: '🔍', title: 'Analizuję i doradzam', desc: 'Analizuję Twoją sytuację i dobieram spersonalizowaną ofertę dopasowaną do Twoich potrzeb.' },
+      { icon: '✍️', title: 'Prowadzę Cię przez proces', desc: 'Wspieram Cię na każdym etapie w Twoim języku. Bez formalności, bez stresu.' },
+      { icon: '💰', title: 'Zaczynasz oszczędzać', desc: 'Nawet 300 € mniej rocznie dzięki optymalnie dobranej ofercie.' },
     ],
   },
   about: {
@@ -59,11 +59,11 @@ export const pl: Translations = {
     name: 'Patryk Kuklinski',
     role: 'Doradca finansowy · Rynek energetyczny w Niemczech',
     quote: 'Pomagam mieszkańcom Niemiec płacić mniej za energię. Prosto, w ich języku, bez ukrytych kosztów.',
-    desc: 'Specjalizuję się w optymalizacji kosztów energii elektrycznej i gazu dla klientów indywidualnych na rynku niemieckim. Działam jako pośrednik — Ty nie płacisz nic, a ja dbam o to, żebyś dostał najlepszą ofertę.',
+    desc: 'Jako doradca finansowy specjalizuję się w doborze spersonalizowanych ofert energetycznych dla klientów indywidualnych na rynku niemieckim. Analizuję Twoją sytuację, porównuję dostępne taryfy i prowadzę Cię przez cały proces — w Twoim języku, bez ukrytych kosztów.',
     benefits: [
       { icon: '💰', title: 'Bezpłatna analiza', desc: 'Zarabiam prowizję od dostawcy, nie od Ciebie' },
       { icon: '🗣️', title: 'Obsługa w Twoim języku', desc: 'Zero barier językowych przy podpisaniu' },
-      { icon: '⚡', title: 'Szybka zmiana', desc: 'Średnio 2–4 tygodnie, bez przerwy w dostawie' },
+      { icon: '⚡', title: 'Szybka realizacja', desc: 'Średnio 2–4 tygodnie, bez przerwy w dostawie' },
       { icon: '🔒', title: 'Zero ukrytych kosztów', desc: 'Widzisz dokładnie co i ile płacisz' },
     ],
   },
@@ -75,9 +75,9 @@ export const pl: Translations = {
     label: 'Opinie klientów',
     title: 'Co mówią nasi klienci?',
     items: [
-      { text: 'Zaoszczędziłem 240 € w pierwszym roku. Patryk wszystko załatwił za mnie, nawet nie musiałem dzwonić do starego dostawcy.', name: 'Marek K.', city: 'Dortmund', savings: '−240 €/rok' },
-      { text: 'Nie wiedziałam że można tak łatwo zmienić dostawcę. Teraz płacę 60 € mniej co miesiąc. Polecam każdemu kto mieszka w Niemczech!', name: 'Olena M.', city: 'Berlin', savings: '−720 €/rok' },
-      { text: 'Szybko, sprawnie, w moim języku. Patryk odpowiedział na WhatsApp w 20 minut. Zmiana zajęła 3 tygodnie.', name: 'Tomasz W.', city: 'Hamburg', savings: '−300 €/rok' },
+      { text: 'Zaoszczędziłem 240 € w pierwszym roku. Patryk wszystko przeanalizował i dobrał idealną ofertę, nawet nie musiałem dzwonić do starego dostawcy.', name: 'Marek K.', city: 'Dortmund', savings: '−240 €/rok' },
+      { text: 'Nie wiedziałam że można tak łatwo zmienić ofertę. Teraz płacę 60 € mniej co miesiąc. Polecam każdemu kto mieszka w Niemczech!', name: 'Olena M.', city: 'Berlin', savings: '−720 €/rok' },
+      { text: 'Szybko, sprawnie, w moim języku. Patryk odpowiedział na WhatsApp w 20 minut i doradził najlepsze rozwiązanie.', name: 'Tomasz W.', city: 'Hamburg', savings: '−300 €/rok' },
     ],
   },
   comparison: {
@@ -88,10 +88,10 @@ export const pl: Translations = {
     rows: [
       'Obsługa w Twoim języku',
       'Bezpłatna analiza rachunku',
+      'Spersonalizowane doradztwo',
       'Pomoc przy podpisaniu umowy',
-      'Negocjacja warunków',
-      'Kontakt bezpośredni',
-      'Wsparcie po zmianie',
+      'Bezpośredni kontakt z doradcą',
+      'Wsparcie po zawarciu umowy',
     ],
   },
   faq: {
@@ -99,10 +99,10 @@ export const pl: Translations = {
     title: 'Często pytacie',
     items: [
       { q: 'Czy to naprawdę bezpłatne?', a: 'Tak. Zarabiam prowizję od dostawcy energii, nie od Ciebie. Dla Ciebie cały proces jest 100% darmowy.' },
-      { q: 'Jak długo trwa zmiana dostawcy?', a: 'Zazwyczaj 2–4 tygodnie. Nowy dostawca sam powiadamia poprzedniego — Ty nie musisz nic robić.' },
-      { q: 'Czy podczas zmiany będę bez prądu?', a: 'Nie. Zmiana dostawcy to tylko zmiana na papierze — prąd płynie cały czas bez żadnych przerw.' },
-      { q: 'Czy mogę zmienić dostawcę w trakcie umowy?', a: 'Sprawdzimy razem warunki Twojej umowy. Często można wyjść bez kary lub z bardzo małą opłatą.' },
-      { q: 'Czy obsługujesz też gaz?', a: 'Tak — prąd i gaz. Można zmienić oba jednocześnie i zaoszczędzić jeszcze więcej.' },
+      { q: 'Jak długo trwa cały proces?', a: 'Zazwyczaj 2–4 tygodnie. Nowy dostawca sam powiadamia poprzedniego — Ty nie musisz nic robić.' },
+      { q: 'Czy podczas zmiany będę bez prądu?', a: 'Nie. To tylko zmiana na papierze — prąd płynie cały czas bez żadnych przerw.' },
+      { q: 'Czy mogę zmienić ofertę w trakcie umowy?', a: 'Sprawdzimy razem warunki Twojej umowy. Często można wyjść bez kary lub z bardzo małą opłatą.' },
+      { q: 'Czy obsługujesz też gaz?', a: 'Tak — prąd i gaz. Można dobrać optymalną ofertę na oba jednocześnie i zaoszczędzić jeszcze więcej.' },
       { q: 'Jakie dokumenty są potrzebne?', a: 'Wystarczy ostatni rachunek za prąd lub gaz. Resztą zajmuję się ja.' },
     ],
     more: 'Zobacz wszystkie pytania →',
