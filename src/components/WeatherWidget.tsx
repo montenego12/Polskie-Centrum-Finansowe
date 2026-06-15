@@ -49,49 +49,35 @@ export function WeatherWidget() {
   }, [])
 
   useEffect(() => {
-    if (!navigator.geolocation) return
-    navigator.geolocation.getCurrentPosition(
-      async ({ coords }) => {
-        const { latitude: lat, longitude: lon } = coords
-        try {
-          const [weatherRes, geoRes] = await Promise.all([
-            fetch(
-              `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&daily=temperature_2m_max,temperature_2m_min,weathercode&timezone=auto&forecast_days=4`
-            ),
-            fetch(
-              `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&zoom=10`,
-              { headers: { 'Accept-Language': 'pl' } }
-            ),
-          ])
-          const weather = await weatherRes.json()
-          const geo = await geoRes.json()
+    async function load() {
+      try {
+        // IP-based geolocation — no browser permission needed
+        const ipRes = await fetch('https://ipapi.co/json/')
+        const ip = await ipRes.json()
+        const { latitude: lat, longitude: lon, city } = ip
 
-          const city =
-            geo.address?.city ||
-            geo.address?.town ||
-            geo.address?.village ||
-            geo.address?.county ||
-            'Twoje miasto'
+        const weatherRes = await fetch(
+          `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&daily=temperature_2m_max,temperature_2m_min,weathercode&timezone=auto&forecast_days=4`
+        )
+        const weather = await weatherRes.json()
 
-          const days: WeatherDay[] = [1, 2, 3].map((offset) => ({
-            label: DAY_NAMES[new Date(weather.daily.time[offset]).getDay()],
-            max: Math.round(weather.daily.temperature_2m_max[offset]),
-            min: Math.round(weather.daily.temperature_2m_min[offset]),
-            code: weather.daily.weathercode[offset],
-          }))
+        const days: WeatherDay[] = [1, 2, 3].map((offset) => ({
+          label: DAY_NAMES[new Date(weather.daily.time[offset]).getDay()],
+          max: Math.round(weather.daily.temperature_2m_max[offset]),
+          min: Math.round(weather.daily.temperature_2m_min[offset]),
+          code: weather.daily.weathercode[offset],
+        }))
 
-          setData({
-            city,
-            temp: Math.round(weather.current_weather.temperature),
-            code: weather.current_weather.weathercode,
-            days,
-          })
-          setTimeout(() => setVisible(true), 3000)
-        } catch {}
-      },
-      () => {},
-      { timeout: 8000 }
-    )
+        setData({
+          city: city || 'Niemcy',
+          temp: Math.round(weather.current_weather.temperature),
+          code: weather.current_weather.weathercode,
+          days,
+        })
+        setTimeout(() => setVisible(true), 3000)
+      } catch {}
+    }
+    load()
   }, [])
 
   if (!data || !visible || closed) return null
