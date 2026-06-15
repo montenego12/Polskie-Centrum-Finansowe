@@ -14,6 +14,7 @@ export interface Translations {
     title: string
     titleAccent: string
     subtitle: string
+    subtitleSuffix: string
     checks: string[]
     formTitle: string
     fields: {

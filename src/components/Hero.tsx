@@ -25,8 +25,8 @@ export function Hero({ t, tForm, lang }: HeroProps) {
           </h1>
 
           <p className="mb-7 text-base leading-relaxed text-white/65 animate-fadeInUp [animation-delay:0.2s]">
-            {t.subtitle} <strong className="text-xl text-gold">300 € rocznie</strong>.{' '}
-            Bezpłatnie, w Twoim języku, bez stresu.
+            {t.subtitle} <strong className="text-xl text-gold">300 €</strong>.{' '}
+            {t.subtitleSuffix}
           </p>
 
           <ul className="flex flex-col gap-3 animate-fadeInUp [animation-delay:0.3s]">

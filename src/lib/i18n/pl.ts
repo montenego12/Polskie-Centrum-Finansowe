@@ -17,6 +17,7 @@ export const pl: Translations = {
     title: 'Płacisz zbyt dużo za prąd lub gaz',
     titleAccent: 'w Niemczech?',
     subtitle: 'Doradzam w wyborze najlepszej oferty energetycznej i pomagam zaoszczędzić nawet',
+    subtitleSuffix: 'Bezpłatnie, w Twoim języku, bez stresu.',
     checks: [
       'Bezpłatna analiza i spersonalizowane doradztwo',
       'Obsługa w języku ojczystym — bez barier',
