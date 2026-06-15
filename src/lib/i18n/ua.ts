@@ -45,6 +45,7 @@ export const ua: Translations = {
   ],
   howItWorks: {
     label: 'Процес',
+    heading: 'Як це працює?',
     title: '4 прості кроки',
     steps: [
       { icon: '📄', title: 'Надішліть рахунок', desc: 'Зробіть фото або надішліть PDF рахунку через форму або WhatsApp.' },

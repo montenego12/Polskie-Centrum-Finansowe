@@ -32,6 +32,7 @@ export interface Translations {
   stats: Array<{ value: string; label: string }>
   howItWorks: {
     label: string
+    heading: string
     title: string
     steps: Array<{ icon: string; title: string; desc: string }>
   }

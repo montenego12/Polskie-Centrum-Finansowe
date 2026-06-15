@@ -6,7 +6,7 @@ export function HowItWorks({ t }: { t: Translations['howItWorks'] }) {
       <div className="mx-auto max-w-6xl">
         <p className="mb-2 text-center text-xs font-bold uppercase tracking-widest text-gold">{t.label}</p>
         <h2 className="mb-12 text-center text-3xl font-black">
-          Jak to działa? <span className="text-gold">{t.title}</span>
+          {t.heading} <span className="text-gold">{t.title}</span>
         </h2>
         <div className="grid gap-5 md:grid-cols-4">
           {t.steps.map((step, i) => (

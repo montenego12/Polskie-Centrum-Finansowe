@@ -45,6 +45,7 @@ export const pl: Translations = {
   ],
   howItWorks: {
     label: 'Proces',
+    heading: 'Jak to działa?',
     title: '4 proste kroki',
     steps: [
       { icon: '📄', title: 'Wyślij rachunek', desc: 'Zrób zdjęcie lub prześlij PDF rachunku za prąd lub gaz przez formularz lub WhatsApp.' },
