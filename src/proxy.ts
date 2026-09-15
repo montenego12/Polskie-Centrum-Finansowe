@@ -1,9 +1,24 @@
 import { NextResponse, type NextRequest } from 'next/server'
 
-const VALID_LANGS = ['pl', 'ua']
+const TP_LANGS = ['pl', 'ua']
 
 export function proxy(request: NextRequest) {
-  const { pathname } = request.nextUrl
+  const { pathname, hostname } = request.nextUrl
+
+  // PCF domain → zawsze idzie na /pcf/
+  if (hostname === 'finansewniemczech.de' || hostname === 'www.finansewniemczech.de') {
+    if (!pathname.startsWith('/pcf')) {
+      return NextResponse.redirect(new URL('/pcf/pl', request.url))
+    }
+    return
+  }
+
+  // Ktoś wszedł na /pcf/ pod domeną TaniPrad → zawsze przenieś na domenę PCF (SEO: unikamy duplicate content)
+  if (pathname.startsWith('/pcf')) {
+    const target = new URL(pathname, 'https://www.finansewniemczech.de')
+    target.search = request.nextUrl.search
+    return NextResponse.redirect(target, 308)
+  }
 
   if (pathname === '/') {
     return NextResponse.redirect(new URL('/pl', request.url))
@@ -18,11 +33,11 @@ export function proxy(request: NextRequest) {
   }
 
   const langSegment = pathname.split('/')[1]
-  if (langSegment && !VALID_LANGS.includes(langSegment) && !pathname.startsWith('/admin') && !pathname.startsWith('/api')) {
+  if (langSegment && !TP_LANGS.includes(langSegment) && !pathname.startsWith('/admin') && !pathname.startsWith('/api')) {
     return NextResponse.redirect(new URL('/pl', request.url))
   }
 }
 
 export const config = {
-  matcher: ['/((?!_next/static|_next/image|favicon.ico|icon|robots.txt|sitemap.xml|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)'],
+  matcher: ['/((?!_next/static|_next/image|favicon.ico|icon|robots.txt|sitemap.xml|.*\\.(?:svg|png|jpg|jpeg|gif|webp|mp4|webm|ogg)$).*)'],
 }
