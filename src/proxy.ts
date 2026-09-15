@@ -6,8 +6,10 @@ export function proxy(request: NextRequest) {
   const { pathname, hostname } = request.nextUrl
 
   // PCF domain → zawsze idzie na /pcf/
+  // (pathname === '/' jest obsługiwane przez next.config.ts redirects() —
+  // to daje absolutny Location header, którego wymagają crawlery typu FB)
   if (hostname === 'finansewniemczech.de' || hostname === 'www.finansewniemczech.de') {
-    if (!pathname.startsWith('/pcf')) {
+    if (!pathname.startsWith('/pcf') && pathname !== '/') {
       return NextResponse.redirect(new URL('/pcf/pl', request.url))
     }
     return
@@ -20,7 +22,10 @@ export function proxy(request: NextRequest) {
     return NextResponse.redirect(target, 308)
   }
 
-  if (pathname === '/') {
+  // pathname === '/' na tanipradwniemczech.de też jest obsługiwane przez
+  // next.config.ts redirects() — tu zostaje tylko fallback dla innych
+  // hostów (np. *.vercel.app preview), gdzie absolutny Location nie gra roli
+  if (pathname === '/' && hostname !== 'tanipradwniemczech.de' && hostname !== 'www.tanipradwniemczech.de') {
     return NextResponse.redirect(new URL('/pl', request.url))
   }
 
