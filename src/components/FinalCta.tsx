@@ -1,7 +1,7 @@
 import type { Translations } from '@/lib/i18n'
 
 export function FinalCta({ t }: { t: Translations['finalCta'] }) {
-  const waNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER
+  const waNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '4917683425546'
 
   return (
     <section className="border-t border-gold/10 bg-gradient-to-br from-brand/10 to-gold/5 px-6 py-24 md:px-12 text-center">

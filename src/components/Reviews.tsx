@@ -12,7 +12,7 @@ export function Reviews({ t }: { t: Translations['reviews'] }) {
           {t.items.map((r, i) => (
             <div key={i} className="rounded-2xl border border-white/8 bg-white/3 p-6 transition hover:-translate-y-1 hover:shadow-2xl">
               <div className="mb-3 tracking-widest text-gold">★★★★★</div>
-              <p className="mb-4 text-sm italic leading-relaxed text-white/70">"{r.text}"</p>
+              <p className="mb-4 text-sm italic leading-relaxed text-white/70">„{r.text}”</p>
               <div className="flex items-center gap-3">
                 <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-brand to-brand-900 text-sm">
                   👤

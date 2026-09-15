@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         'pl': 'https://tanipradwniemczech.de/pl',
         'uk': 'https://tanipradwniemczech.de/ua',
+        'x-default': 'https://tanipradwniemczech.de/pl',
       },
     },
     openGraph: {
@@ -30,7 +31,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t.meta.description,
       url: `https://tanipradwniemczech.de/${lang}`,
       siteName: 'Tani Prąd w Niemczech',
-      images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+      locale: lang === 'ua' ? 'uk_UA' : 'pl_PL',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t.meta.title,
+      description: t.meta.description,
     },
   }
 }

@@ -35,6 +35,7 @@ export interface Translations {
     label: string
     heading: string
     title: string
+    subtitle: string
     steps: Array<{ icon: string; title: string; desc: string }>
   }
   about: {
@@ -43,6 +44,7 @@ export interface Translations {
     role: string
     quote: string
     desc: string
+    imgAlt: string
     benefits: Array<{ icon: string; title: string; desc: string }>
   }
   providers: { title: string; names: string[] }

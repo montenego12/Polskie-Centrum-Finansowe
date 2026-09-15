@@ -13,7 +13,9 @@ export function FaqAccordion({ t, lang, preview = false }: FaqProps) {
     <section id="faq" className="px-6 py-20 md:px-12">
       <div className="mx-auto max-w-3xl">
         <p className="mb-2 text-center text-xs font-bold uppercase tracking-widest text-gold">{t.label}</p>
-        <h2 className="mb-10 text-center text-3xl font-black">{t.title}</h2>
+        {preview
+          ? <h2 className="mb-10 text-center text-3xl font-black">{t.title}</h2>
+          : <h1 className="mb-10 text-center text-3xl font-black">{t.title}</h1>}
         <div className="flex flex-col gap-3">
           {items.map((item, i) => (
             <div key={i} className="overflow-hidden rounded-xl border border-white/8 bg-white/3 transition hover:border-gold/20">

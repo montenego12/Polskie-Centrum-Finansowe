@@ -2,8 +2,8 @@ import type { Translations } from './types'
 
 export const pl: Translations = {
   meta: {
-    title: 'Tani Prąd w Niemczech — Zaoszczędź do 300 € rocznie',
-    description: 'Bezpłatne doradztwo finansowe w zakresie energii w Niemczech. Dobieramy spersonalizowaną ofertę w Twoim języku. Partner Teleson GmbH.',
+    title: 'Tani Prąd i Gaz w Niemczech — Zmień Dostawcę Bezpłatnie',
+    description: 'Zmień dostawcę prądu lub gazu w Niemczech i zaoszczędź do 300 € rocznie. Bezpłatne doradztwo po polsku dla Polaków i Ukraińców. Szybko, bez stresu. Partner Teleson GmbH.',
   },
   nav: {
     howItWorks: 'Jak to działa',
@@ -48,6 +48,7 @@ export const pl: Translations = {
     label: 'Proces',
     heading: 'Jak to działa?',
     title: '4 proste kroki',
+    subtitle: 'Zmiana dostawcy prądu lub gazu w Niemczech — szybko, bezpłatnie, w Twoim języku.',
     steps: [
       { icon: '📄', title: 'Wyślij rachunek', desc: 'Zrób zdjęcie lub prześlij PDF rachunku za prąd lub gaz przez formularz lub WhatsApp.' },
       { icon: '🔍', title: 'Analizuję i doradzam', desc: 'Analizuję Twoją sytuację i dobieram spersonalizowaną ofertę dopasowaną do Twoich potrzeb.' },
@@ -57,10 +58,11 @@ export const pl: Translations = {
   },
   about: {
     label: 'O mnie',
-    name: 'Patryk Kuklinski',
+    name: 'Patryk Kukliński',
     role: 'Doradca finansowy · Rynek energetyczny w Niemczech',
     quote: 'Pomagam mieszkańcom Niemiec płacić mniej za energię. Prosto, w ich języku, bez ukrytych kosztów.',
-    desc: 'Jako doradca finansowy specjalizuję się w doborze spersonalizowanych ofert energetycznych dla klientów indywidualnych na rynku niemieckim. Analizuję Twoją sytuację, porównuję dostępne taryfy i prowadzę Cię przez cały proces — w Twoim języku, bez ukrytych kosztów.',
+    desc: 'Jako doradca finansowy specjalizuję się w zmianie dostawcy prądu i gazu dla Polaków i Ukraińców mieszkających w Niemczech. Analizuję Twój rachunek, porównuję dostępne taryfy i prowadzę Cię przez cały proces zmiany dostawcy — w Twoim języku, bez ukrytych kosztów.',
+    imgAlt: 'Patryk Kukliński — doradca finansowy, zmiana dostawcy prądu i gazu w Niemczech',
     benefits: [
       { icon: '💰', title: 'Bezpłatna analiza', desc: 'Usługa doradcza w 100% bezpłatna dla klienta' },
       { icon: '🗣️', title: 'Obsługa w Twoim języku', desc: 'Zero barier językowych przy podpisaniu' },
@@ -117,7 +119,7 @@ export const pl: Translations = {
     form: '📋 Wypełnij formularz',
   },
   footer: {
-    rights: '© 2025 Tani Prąd w Niemczech · Patryk Kuklinski · Partner Teleson GmbH',
+    rights: `© ${new Date().getFullYear()} Tani Prąd w Niemczech · Patryk Kukliński · Partner Teleson GmbH`,
     fb1: 'Praca w Niemczech',
     fb2: 'Polskie Centrum Finansowe',
     privacy: 'Polityka prywatności',

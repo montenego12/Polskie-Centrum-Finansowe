@@ -3,6 +3,7 @@ import { Nav } from '@/components/Nav'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { Footer } from '@/components/Footer'
 import { StickyWhatsApp } from '@/components/StickyWhatsApp'
+import type { Metadata } from 'next'
 
 const faqExtra = {
   pl: [
@@ -31,6 +32,32 @@ const faqExtra = {
 
 interface Props { params: Promise<{ lang: string }> }
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang } = await params
+  const title = lang === 'ua'
+    ? 'Часті запитання про зміну постачальника електрики та газу | Tani Prąd'
+    : 'Najczęstsze pytania o zmianę dostawcy prądu i gazu | Tani Prąd'
+  const description = lang === 'ua'
+    ? 'Відповіді на найпоширеніші запитання про зміну постачальника електрики та газу в Німеччині — безкоштовно, вашою мовою.'
+    : 'Odpowiedzi na najczęstsze pytania o zmianę dostawcy prądu i gazu w Niemczech — bezpłatnie, w Twoim języku.'
+  return {
+    metadataBase: new URL('https://tanipradwniemczech.de'),
+    title,
+    description,
+    alternates: {
+      canonical: `https://tanipradwniemczech.de/${lang}/faq`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `https://tanipradwniemczech.de/${lang}/faq`,
+      siteName: 'Tani Prąd w Niemczech',
+      locale: lang === 'ua' ? 'uk_UA' : 'pl_PL',
+      type: 'website',
+    },
+  }
+}
+
 export default async function FaqPage({ params }: Props) {
   const { lang: langStr } = await params
   const lang = langStr as Lang
@@ -44,7 +71,7 @@ export default async function FaqPage({ params }: Props) {
       <main>
         <FaqAccordion t={fullFaq} lang={lang} />
       </main>
-      <Footer t={t.footer} />
+      <Footer t={t.footer} lang={lang} />
       <StickyWhatsApp />
     </>
   )

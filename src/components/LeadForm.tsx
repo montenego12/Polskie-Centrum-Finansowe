@@ -101,7 +101,7 @@ export function LeadForm({ t, tForm, lang }: LeadFormProps) {
       </button>
 
       <a
-        href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}`}
+        href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '4917683425546'}`}
         target="_blank"
         rel="noopener noreferrer"
         className="block w-full rounded-xl border border-wa/30 bg-wa/10 py-3.5 text-center text-xs font-bold text-wa transition hover:bg-wa/20"

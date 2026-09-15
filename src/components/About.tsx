@@ -1,14 +1,15 @@
 import Image from 'next/image'
 import type { Translations } from '@/lib/i18n'
 
-export function About({ t }: { t: Translations['about'] }) {
+export function About({ t, standalone = false }: { t: Translations['about']; standalone?: boolean }) {
+  const NameTag = standalone ? 'h1' : 'h2'
   return (
     <section id="about" className="border-y border-white/5 bg-white/[0.02] px-6 py-20 md:px-12">
       <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-2 items-center">
         <div className="flex justify-center">
           <div className="relative">
             <div className="relative h-80 w-64 overflow-hidden rounded-2xl border border-gold/20 shadow-[0_40px_80px_rgba(0,0,0,0.5)] animate-float">
-              <Image src="/patryk.jpg" alt="Patryk Kuklinski" fill className="object-cover object-top" />
+              <Image src="/patryk.jpg" alt={t.imgAlt} fill className="object-cover object-top" />
             </div>
             <div className="absolute -bottom-2.5 -right-2.5 rounded-xl bg-gradient-to-br from-gold to-gold-600 px-4 py-2.5 text-xs font-extrabold text-dark shadow-[0_8px_24px_rgba(251,211,141,0.3)]">
               ⚡ Partner Teleson GmbH
@@ -18,10 +19,10 @@ export function About({ t }: { t: Translations['about'] }) {
 
         <div>
           <p className="mb-2 text-xs font-bold uppercase tracking-widest text-gold">{t.label}</p>
-          <h2 className="mb-1 text-xl font-black">{t.name}</h2>
+          <NameTag className="mb-1 text-xl font-black">{t.name}</NameTag>
           <p className="mb-5 text-xs text-gold">{t.role}</p>
           <blockquote className="mb-5 border-l-2 border-gold pl-5 text-lg font-bold leading-relaxed">
-            "{t.quote}"
+            „{t.quote}”
           </blockquote>
           <p className="mb-6 text-sm leading-relaxed text-white/60">{t.desc}</p>
           <div className="grid grid-cols-2 gap-3.5">

@@ -23,7 +23,7 @@ const CONTENT = {
 export function WhatsAppChat({ lang }: { lang: Lang }) {
   const [visible, setVisible] = useState(false)
   const [closed, setClosed] = useState(false)
-  const waNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER
+  const waNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '4917683425546'
   const c = CONTENT[lang]
 
   useEffect(() => {

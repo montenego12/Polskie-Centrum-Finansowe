@@ -5,9 +5,10 @@ export function HowItWorks({ t }: { t: Translations['howItWorks'] }) {
     <section id="howItWorks" className="px-6 py-20 md:px-12">
       <div className="mx-auto max-w-6xl">
         <p className="mb-2 text-center text-xs font-bold uppercase tracking-widest text-gold">{t.label}</p>
-        <h2 className="mb-12 text-center text-3xl font-black">
+        <h2 className="mb-3 text-center text-3xl font-black">
           {t.heading} <span className="text-gold">{t.title}</span>
         </h2>
+        <p className="mb-12 text-center text-sm text-white/50">{t.subtitle}</p>
         <div className="grid gap-5 md:grid-cols-4">
           {t.steps.map((step, i) => (
             <div

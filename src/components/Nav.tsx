@@ -16,7 +16,7 @@ export function Nav({ t, lang }: NavProps) {
     setOpen(false)
   }
 
-  const waNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER
+  const waNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '4917683425546'
 
   return (
     <nav className="sticky top-0 z-50 border-b border-gold/15 bg-dark/85 backdrop-blur-xl">
@@ -34,7 +34,7 @@ export function Nav({ t, lang }: NavProps) {
         {/* Desktop */}
         <div className="hidden items-center gap-7 md:flex">
           {(['howItWorks', 'about', 'reviews', 'faq'] as const).map(key => (
-            <a key={key} href={`#${key}`} className="text-sm text-white/70 transition hover:text-gold">
+            <a key={key} href={`/${lang}#${key}`} className="text-sm text-white/70 transition hover:text-gold">
               {t[key]}
             </a>
           ))}
@@ -53,6 +53,10 @@ export function Nav({ t, lang }: NavProps) {
             ))}
           </div>
 
+          <a href={`/pcf/${lang}`}
+            className="rounded-lg border border-gold/30 bg-gold/10 px-3 py-2 text-xs font-bold text-gold transition hover:bg-gold/20">
+            🛡️ Polskie Centrum Finansowe
+          </a>
           <a
             href={`https://wa.me/${waNumber}`}
             target="_blank"
@@ -97,13 +101,17 @@ export function Nav({ t, lang }: NavProps) {
             {(['howItWorks', 'about', 'reviews', 'faq'] as const).map(key => (
               <a
                 key={key}
-                href={`#${key}`}
+                href={`/${lang}#${key}`}
                 onClick={() => setOpen(false)}
                 className="rounded-lg px-3 py-3 text-sm text-white/70 transition hover:bg-white/5 hover:text-gold"
               >
                 {t[key]}
               </a>
             ))}
+            <a href={`/pcf/${lang}`} onClick={() => setOpen(false)}
+              className="rounded-lg border border-gold/30 bg-gold/10 px-3 py-3 text-center text-sm font-bold text-gold">
+              🛡️ Polskie Centrum Finansowe
+            </a>
             <a
               href={`https://wa.me/${waNumber}`}
               target="_blank"

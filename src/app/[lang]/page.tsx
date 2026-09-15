@@ -10,9 +10,9 @@ import { ComparisonTable } from '@/components/ComparisonTable'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { FinalCta } from '@/components/FinalCta'
 import { Footer } from '@/components/Footer'
-import { StickyWhatsApp } from '@/components/StickyWhatsApp'
 import { WhatsAppChat } from '@/components/WhatsAppChat'
 import { WeatherWidget } from '@/components/WeatherWidget'
+import { JsonLd } from '@/components/JsonLd'
 
 interface Props { params: Promise<{ lang: string }> }
 
@@ -23,6 +23,7 @@ export default async function Home({ params }: Props) {
 
   return (
     <>
+      <JsonLd t={t} lang={lang} />
       <Nav t={t.nav} lang={lang} />
       <main id="hero">
         <Hero t={t.hero} tForm={t.form} lang={lang} />
@@ -35,8 +36,7 @@ export default async function Home({ params }: Props) {
         <FaqAccordion t={t.faq} lang={lang} preview />
         <FinalCta t={t.finalCta} />
       </main>
-      <Footer t={t.footer} />
-      <StickyWhatsApp />
+      <Footer t={t.footer} lang={lang} />
       <WhatsAppChat lang={lang} />
       <WeatherWidget />
     </>
