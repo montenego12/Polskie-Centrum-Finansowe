@@ -56,4 +56,13 @@ Strony firmowe, landing pages, usługowe, sklepy, B2B, marki premium, wellness, 
 
 # TANIPRAD — Projekt strony internetowej
 
-<!-- Uzupełnij po otrzymaniu briefu projektu -->
+## Aktualny stan (na 2026-09-17)
+
+Dwa produkty na jednym repo Next.js/TypeScript/Tailwind (`montenego12/Polskie-Centrum-Finansowe` na GitHub, wdrożenie Vercel):
+
+- **TaniPrad w Niemczech** (tanipradwniemczech.de) — zmiana dostawcy prądu/gazu, WhatsApp + zdjęcie rachunku. Meta Pixel (`1769016521096458`) zainstalowany i działa na żywo (zdarzenia PageView/Lead/Contact).
+- **PCF — Polskie Centrum Finansowe** (finansewniemczech.de, `/pcf/*`) — Patryk jako niezależny doradca DVAG.
+
+Twarda zasada: żadnych fabrykowanych opinii klientów (nazwisko + miasto + kwota) w reklamach/treściach — narusza niemieckie prawo UWG. (Opinie obecnie na stronie TaniPrad są prawdziwe, potwierdzone przez Patryka.)
+
+**Kampania Meta Ads TaniPrad (w toku, patrz memory `taniprad-meta-ads-strategia` i `meta-ads-konto-status`):** stare portfolio "PD Marketing" i osobiste konto 134728530593254 nieużywane (zablokowane/zbędne). Aktywna struktura: portfolio firmowe **"Tani prąd i gaz w Niemczech"** (business_id 1808050286990434) zawiera Stronę FB, Meta Pixel i konto reklamowe **"TaniPrad Ads"** (EUR). Kampania "TaniPrad - Ruch - PL/UA - wrzesień 2026" ma 3 reklamy w jednym zestawie (karuzela + 2 warianty obrazu) — wersja robocza, jeszcze nie opublikowana. Blokery publikacji: brak metody płatności na koncie, brakujące dane "Reklamodawca/Płatnik (wybrane lokalizacje)" dla Niemiec. Automatyzacja Claude in Chrome w tym projekcie odblokowana za zgodą Patryka.
