@@ -42,7 +42,10 @@ export function LeadForm({ t, tForm, lang }: LeadFormProps) {
 
     const res = await fetch('/api/leads', { method: 'POST', body: fd })
     setStatus(res.ok ? 'success' : 'error')
-    if (res.ok) formRef.current?.reset()
+    if (res.ok) {
+      formRef.current?.reset()
+      window.fbq?.('track', 'Lead')
+    }
   }
 
   if (status === 'success') {
@@ -104,6 +107,7 @@ export function LeadForm({ t, tForm, lang }: LeadFormProps) {
         href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '4917683425546'}`}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => window.fbq?.('track', 'Contact')}
         className="block w-full rounded-xl border border-wa/30 bg-wa/10 py-3.5 text-center text-xs font-bold text-wa transition hover:bg-wa/20"
       >
         💬 {t.ctaWa}

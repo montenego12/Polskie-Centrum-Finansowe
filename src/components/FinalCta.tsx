@@ -1,3 +1,4 @@
+'use client'
 import type { Translations } from '@/lib/i18n'
 
 export function FinalCta({ t }: { t: Translations['finalCta'] }) {
@@ -15,6 +16,7 @@ export function FinalCta({ t }: { t: Translations['finalCta'] }) {
           href={`https://wa.me/${waNumber}`}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => window.fbq?.('track', 'Contact')}
           className="rounded-xl bg-wa px-9 py-5 text-base font-extrabold text-white shadow-[0_8px_32px_rgba(37,211,102,0.3)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(37,211,102,0.4)]"
         >
           {t.wa}

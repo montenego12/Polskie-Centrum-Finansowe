@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { getTranslations, type Lang } from '@/lib/i18n'
 import { notFound } from 'next/navigation'
+import { MetaPixel } from '@/components/MetaPixel'
 
 const VALID_LANGS: Lang[] = ['pl', 'ua']
 
@@ -51,7 +52,10 @@ export default async function LangLayout({ children, params }: Props) {
   if (!VALID_LANGS.includes(lang as Lang)) notFound()
   return (
     <html lang={lang === 'ua' ? 'uk' : 'pl'}>
-      <body>{children}</body>
+      <body>
+        <MetaPixel />
+        {children}
+      </body>
     </html>
   )
 }
