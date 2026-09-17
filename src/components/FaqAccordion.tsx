@@ -14,7 +14,7 @@ export function FaqAccordion({ t, lang, preview = false }: FaqProps) {
       <div className="mx-auto max-w-3xl">
         <p className="mb-2 text-center text-xs font-bold uppercase tracking-widest text-gold">{t.label}</p>
         {preview
-          ? <h2 className="mb-10 text-center text-3xl font-black">{t.title}</h2>
+          ? <h2 className="font-display mb-10 text-center text-3xl font-black">{t.title}</h2>
           : <h1 className="mb-10 text-center text-3xl font-black">{t.title}</h1>}
         <div className="flex flex-col gap-3">
           {items.map((item, i) => (

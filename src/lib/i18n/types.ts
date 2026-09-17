@@ -42,6 +42,7 @@ export interface Translations {
     label: string
     name: string
     role: string
+    badge: string
     quote: string
     desc: string
     imgAlt: string

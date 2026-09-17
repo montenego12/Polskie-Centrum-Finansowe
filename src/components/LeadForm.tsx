@@ -63,7 +63,7 @@ export function LeadForm({ t, tForm, lang }: LeadFormProps) {
         📋 <span className="text-gold">{t.formTitle}</span>
       </p>
 
-      <div className="mb-2.5 grid grid-cols-2 gap-2.5">
+      <div className="mb-2.5 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
         <Field name="name" placeholder={t.fields.name} error={errors.name} />
         <Field name="phone" placeholder={t.fields.phone} error={errors.phone} />
       </div>

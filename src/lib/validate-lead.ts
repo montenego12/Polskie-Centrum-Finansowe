@@ -22,8 +22,8 @@ export function validateLead(input: LeadInput): ValidationResult {
   if (!input.name.trim()) errors.name = 'Imię jest wymagane'
   if (!input.phone.trim()) {
     errors.phone = 'Telefon jest wymagany'
-  } else if (!/^\+49\d{6,}$/.test(input.phone.replace(/\s/g, ''))) {
-    errors.phone = 'Numer musi zaczynać się od +49'
+  } else if (!/^\+?\d{7,15}$/.test(input.phone.replace(/[\s-]/g, ''))) {
+    errors.phone = 'Nieprawidłowy numer telefonu'
   }
   if (!input.email.trim()) {
     errors.email = 'Email jest wymagany'

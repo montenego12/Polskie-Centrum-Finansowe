@@ -71,7 +71,14 @@
 
 @layer base {
   html { scroll-behavior: smooth; }
-  body { background-color: #0a0f1e; color: #fff; }
+  body {
+    background-color: #0a0f1e;
+    color: #fff;
+    font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  }
+  .font-display {
+    font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  }
 }
 
 @layer utilities {

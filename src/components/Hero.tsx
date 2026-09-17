@@ -20,7 +20,7 @@ export function Hero({ t, tForm, lang }: HeroProps) {
             {t.badge}
           </div>
 
-          <h1 className="mb-4 text-4xl font-black leading-tight md:text-5xl animate-fadeInUp [animation-delay:0.1s]">
+          <h1 className="font-display mb-4 text-4xl font-black leading-tight md:text-5xl animate-fadeInUp [animation-delay:0.1s]">
             {t.title} <span className="text-gold">{t.titleAccent}</span>
           </h1>
 

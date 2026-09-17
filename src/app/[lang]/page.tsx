@@ -11,7 +11,6 @@ import { FaqAccordion } from '@/components/FaqAccordion'
 import { FinalCta } from '@/components/FinalCta'
 import { Footer } from '@/components/Footer'
 import { WhatsAppChat } from '@/components/WhatsAppChat'
-import { WeatherWidget } from '@/components/WeatherWidget'
 import { JsonLd } from '@/components/JsonLd'
 
 interface Props { params: Promise<{ lang: string }> }
@@ -38,7 +37,6 @@ export default async function Home({ params }: Props) {
       </main>
       <Footer t={t.footer} lang={lang} />
       <WhatsAppChat lang={lang} />
-      <WeatherWidget />
     </>
   )
 }

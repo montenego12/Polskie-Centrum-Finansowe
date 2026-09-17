@@ -7,7 +7,7 @@ export function FinalCta({ t }: { t: Translations['finalCta'] }) {
   return (
     <section className="border-t border-gold/10 bg-gradient-to-br from-brand/10 to-gold/5 px-6 py-24 md:px-12 text-center">
       <p className="mb-2 text-xs font-bold uppercase tracking-widest text-gold">{t.label}</p>
-      <h2 className="mb-3 text-3xl font-black md:text-4xl">
+      <h2 className="font-display mb-3 text-3xl font-black md:text-4xl">
         {t.title} <span className="text-gold">{t.titleAccent}</span>
       </h2>
       <p className="mb-10 text-base text-white/60">{t.subtitle}</p>

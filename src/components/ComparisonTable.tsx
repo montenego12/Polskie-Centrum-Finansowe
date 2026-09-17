@@ -5,7 +5,7 @@ export function ComparisonTable({ t }: { t: Translations['comparison'] }) {
     <section className="border-y border-white/5 bg-white/[0.02] px-6 py-20 md:px-12">
       <div className="mx-auto max-w-3xl">
         <p className="mb-2 text-center text-xs font-bold uppercase tracking-widest text-gold">{t.subtitle}</p>
-        <h2 className="mb-10 text-center text-2xl font-black md:text-3xl">{t.title}</h2>
+        <h2 className="font-display mb-10 text-center text-2xl font-black md:text-3xl">{t.title}</h2>
         <div className="overflow-hidden rounded-2xl border border-white/10">
           <div className="grid grid-cols-3 gap-px bg-white/10">
             <div className="bg-dark px-4 py-3 text-xs font-bold text-white/40" />

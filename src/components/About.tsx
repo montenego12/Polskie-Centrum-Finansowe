@@ -12,7 +12,7 @@ export function About({ t, standalone = false }: { t: Translations['about']; sta
               <Image src="/patryk.jpg" alt={t.imgAlt} fill className="object-cover object-top" />
             </div>
             <div className="absolute -bottom-2.5 -right-2.5 rounded-xl bg-gradient-to-br from-gold to-gold-600 px-4 py-2.5 text-xs font-extrabold text-dark shadow-[0_8px_24px_rgba(251,211,141,0.3)]">
-              ⚡ Partner Teleson GmbH
+              ⚡ {t.badge}
             </div>
           </div>
         </div>

@@ -14,8 +14,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? 'Про мене — Patryk Kukliński, фінансовий радник у Німеччині | Tani Prąd'
     : 'O mnie — Patryk Kukliński, doradca finansowy w Niemczech | Tani Prąd'
   const description = lang === 'ua'
-    ? 'Познайомтесь з Patryk Kukliński — партнером Teleson GmbH, який допомагає полякам та українцям в Німеччині заощаджувати на електриці та газі.'
-    : 'Poznaj Patryka Kuklińskiego — partnera Teleson GmbH, który pomaga Polakom i Ukraińcom w Niemczech oszczędzać na prądzie i gazie.'
+    ? 'Познайомтесь з Patryk Kukliński — фінансовим радником, який допомагає полякам та українцям в Німеччині заощаджувати на електриці та газі.'
+    : 'Poznaj Patryka Kuklińskiego — doradcę finansowego, który pomaga Polakom i Ukraińcom w Niemczech oszczędzać na prądzie i gazie.'
   return {
     metadataBase: new URL('https://tanipradwniemczech.de'),
     title,

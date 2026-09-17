@@ -1,7 +1,19 @@
 import type { Metadata } from 'next'
+import { Fraunces, Manrope } from 'next/font/google'
 import { getTranslations, type Lang } from '@/lib/i18n'
 import { notFound } from 'next/navigation'
 import { MetaPixel } from '@/components/MetaPixel'
+
+const fraunces = Fraunces({
+  subsets: ['latin', 'latin-ext'],
+  weight: ['500', '600', '700'],
+  variable: '--font-display',
+})
+const manrope = Manrope({
+  subsets: ['latin', 'latin-ext'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-body',
+})
 
 const VALID_LANGS: Lang[] = ['pl', 'ua']
 
@@ -52,7 +64,7 @@ export default async function LangLayout({ children, params }: Props) {
   if (!VALID_LANGS.includes(lang as Lang)) notFound()
   return (
     <html lang={lang === 'ua' ? 'uk' : 'pl'}>
-      <body>
+      <body className={`${fraunces.variable} ${manrope.variable}`}>
         <MetaPixel />
         {children}
       </body>

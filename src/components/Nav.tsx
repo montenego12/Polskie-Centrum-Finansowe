@@ -23,8 +23,10 @@ export function Nav({ t, lang }: NavProps) {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-gold to-gold-600 text-lg">
-            ⚡
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-dark-900">
+            <svg viewBox="0 0 32 32" className="h-5 w-5" fill="none" aria-hidden="true">
+              <path d="M17.5 4 8 18h6.2l-1.7 10L24 14h-6.2L19.5 4z" fill="#e53e3e" />
+            </svg>
           </div>
           <span className="text-base font-extrabold">
             Tani Prąd <span className="text-gold">w Niemczech</span>

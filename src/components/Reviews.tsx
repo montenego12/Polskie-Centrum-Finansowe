@@ -5,7 +5,7 @@ export function Reviews({ t }: { t: Translations['reviews'] }) {
     <section id="reviews" className="px-6 py-20 md:px-12">
       <div className="mx-auto max-w-6xl">
         <p className="mb-2 text-center text-xs font-bold uppercase tracking-widest text-gold">{t.label}</p>
-        <h2 className="mb-12 text-center text-3xl font-black">
+        <h2 className="font-display mb-12 text-center text-3xl font-black">
           <span className="text-gold">{t.title}</span>
         </h2>
         <div className="grid gap-5 md:grid-cols-3">

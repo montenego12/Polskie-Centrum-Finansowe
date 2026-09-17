@@ -26,8 +26,18 @@ describe('validateLead', () => {
     expect(result.errors.phone).toBeDefined()
   })
 
-  it('rejects phone without +49', () => {
-    const result = validateLead({ ...valid, phone: '0123456789' })
+  it('accepts phone without country code', () => {
+    const result = validateLead({ ...valid, phone: '512345678' })
+    expect(result.ok).toBe(true)
+  })
+
+  it('accepts Polish phone number', () => {
+    const result = validateLead({ ...valid, phone: '+48512345678' })
+    expect(result.ok).toBe(true)
+  })
+
+  it('rejects too short phone number', () => {
+    const result = validateLead({ ...valid, phone: '12345' })
     expect(result.ok).toBe(false)
     expect(result.errors.phone).toBeDefined()
   })

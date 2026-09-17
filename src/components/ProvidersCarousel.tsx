@@ -15,7 +15,7 @@ export function ProvidersCarousel({ t }: { t: Translations['providers'] }) {
   return (
     <section className="overflow-hidden border-b border-white/5 py-14">
       <p className="mb-8 px-6 text-center text-sm font-bold text-white/70">{t.title}</p>
-      <div className="flex animate-scrollX">
+      <div className="flex w-max animate-scrollX">
         {doubled.map((logo, i) => (
           <div
             key={i}
