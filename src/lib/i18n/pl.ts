@@ -25,6 +25,7 @@ export const pl: Translations = {
       'Osobisty kontakt ze mną na każdym etapie',
     ],
     formTitle: 'Sprawdź ile możesz zaoszczędzić',
+    formSubtitle: 'Odpowiadam w ciągu godziny — bezpłatnie i bez zobowiązań',
     fields: {
       name: 'Imię i nazwisko',
       phone: 'Telefon',

@@ -59,9 +59,10 @@ export function LeadForm({ t, tForm, lang }: LeadFormProps) {
 
   return (
     <form ref={formRef} onSubmit={handleSubmit} className="glass glass-top relative rounded-2xl p-8">
-      <p className="mb-5 text-center text-sm font-bold">
+      <p className="mb-1.5 text-center text-sm font-bold">
         📋 <span className="text-gold">{t.formTitle}</span>
       </p>
+      <p className="mb-5 text-center text-xs text-white/50">{t.formSubtitle}</p>
 
       <div className="mb-2.5 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
         <Field name="name" placeholder={t.fields.name} error={errors.name} />

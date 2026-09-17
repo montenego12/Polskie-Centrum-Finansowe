@@ -17,6 +17,7 @@ export interface Translations {
     subtitleSuffix: string
     checks: string[]
     formTitle: string
+    formSubtitle: string
     fields: {
       name: string
       phone: string
