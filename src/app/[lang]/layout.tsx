@@ -31,6 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     metadataBase: new URL('https://tanipradwniemczech.de'),
     title: t.meta.title,
     description: t.meta.description,
+    icons: { icon: '/taniprad-icon.svg' },
     alternates: {
       canonical: `https://tanipradwniemczech.de/${lang}`,
       languages: {
