@@ -39,6 +39,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   )
 
+  const pcfBlogUrls: MetadataRoute.Sitemap = pcfLangs.map(lang => ({
+    url: `${pcfBase}/${lang}/blog`,
+    lastModified: new Date(),
+    changeFrequency: 'daily' as const,
+    priority: 0.7,
+  }))
+
   const cityUrls: MetadataRoute.Sitemap = GERMAN_CITIES.map(city => ({
     url: `${pcfBase}/pl/${city.slug}`,
     lastModified: new Date(),
@@ -46,5 +53,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: city.slug === 'magdeburg' ? 0.9 : 0.7,
   }))
 
-  return [...tpUrls, ...pcfCoreUrls, ...cityUrls]
+  return [...tpUrls, ...pcfCoreUrls, ...pcfBlogUrls, ...cityUrls]
 }
