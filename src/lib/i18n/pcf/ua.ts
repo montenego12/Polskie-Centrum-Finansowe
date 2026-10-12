@@ -12,6 +12,7 @@ export const pcfUa: PcfTranslations = {
     taxes: 'Податки',
     about: 'Про мене',
     faq: 'FAQ',
+    blog: 'Блог',
     whatsapp: 'Контакт',
     switchTo: '⚡ Дешева Електрика і Газ у Німеччині',
   },

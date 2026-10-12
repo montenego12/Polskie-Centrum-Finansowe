@@ -34,6 +34,7 @@ export function PcfNav({ t, lang }: Props) {
           <Link href={`${base}/rozliczenie-podatkowe`} className="text-xs font-medium text-[#c9a227] transition hover:text-[#b8891e]">{t.taxes}</Link>
           <Link href={`${base}/o-nas`} className="text-xs font-medium text-white/70 transition hover:text-[#c9a227]">{t.about}</Link>
           <Link href={`${base}/faq`} className="text-xs font-medium text-white/70 transition hover:text-[#c9a227]">{t.faq}</Link>
+          <Link href={`${base}/blog`} className="text-xs font-medium text-white/70 transition hover:text-[#c9a227]">{t.blog}</Link>
         </div>
 
         {/* Desktop actions */}
@@ -95,6 +96,7 @@ export function PcfNav({ t, lang }: Props) {
           <Link href={`${base}/rozliczenie-podatkowe`} onClick={() => setOpen(false)} className="text-sm font-bold text-[#c9a227]">{t.taxes}</Link>
           <Link href={`${base}/o-nas`} onClick={() => setOpen(false)} className="text-sm font-medium text-white/70">{t.about}</Link>
           <Link href={`${base}/faq`} onClick={() => setOpen(false)} className="text-sm font-medium text-white/70">{t.faq}</Link>
+          <Link href={`${base}/blog`} onClick={() => setOpen(false)} className="text-sm font-medium text-white/70">{t.blog}</Link>
           <hr className="border-white/10" />
           <a href={tpBase} className="text-sm font-bold text-white/30">{t.switchTo}</a>
           <a href={`https://wa.me/${waNumber}`} target="_blank" rel="noopener noreferrer"

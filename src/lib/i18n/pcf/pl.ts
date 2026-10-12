@@ -12,6 +12,7 @@ export const pcfPl: PcfTranslations = {
     taxes: 'Podatki',
     about: 'O mnie',
     faq: 'FAQ',
+    blog: 'Blog',
     whatsapp: 'Kontakt',
     switchTo: '⚡ Tani Prąd w Niemczech',
   },

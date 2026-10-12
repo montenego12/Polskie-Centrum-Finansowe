@@ -9,6 +9,7 @@ export interface PcfTranslations {
     taxes: string
     about: string
     faq: string
+    blog: string
     whatsapp: string
     switchTo: string
   }

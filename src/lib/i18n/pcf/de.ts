@@ -12,6 +12,7 @@ export const pcfDe: PcfTranslations = {
     taxes: 'Steuern',
     about: 'Über mich',
     faq: 'FAQ',
+    blog: 'Blog',
     whatsapp: 'Kontakt',
     switchTo: '⚡ Günstiger Strom in DE',
   },
