@@ -38,7 +38,7 @@ export function PcfServicesOverview({ t, lang }: Props) {
                 <h3 className="mb-2 text-lg font-black text-black">{cat.title}</h3>
                 <p className="mb-5 text-sm leading-relaxed text-gray-500 flex-1">{cat.desc}</p>
                 <Link
-                  href={`/pcf/${lang}/${cat.href}`}
+                  href={`/${lang}/${cat.href}`}
                   className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wide text-[#c9a227] hover:underline"
                 >
                   {cat.cta} →

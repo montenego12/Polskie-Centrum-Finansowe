@@ -13,13 +13,13 @@ const nextConfig: NextConfig = {
       {
         source: '/',
         has: [{ type: 'host', value: 'finansewniemczech.de' }],
-        destination: 'https://www.finansewniemczech.de/pcf/pl',
+        destination: 'https://www.finansewniemczech.de/pl',
         permanent: false,
       },
       {
         source: '/',
         has: [{ type: 'host', value: 'www.finansewniemczech.de' }],
-        destination: 'https://www.finansewniemczech.de/pcf/pl',
+        destination: 'https://www.finansewniemczech.de/pl',
         permanent: false,
       },
       {

@@ -10,7 +10,7 @@ const MENU_LABEL = { pl: ['Otwórz menu', 'Zamknij menu'], ua: ['Відкрит�
 
 export function PcfNav({ t, lang }: Props) {
   const [open, setOpen] = useState(false)
-  const base = `/pcf/${lang}`
+  const base = `/${lang}`
   const tpBase = `https://tanipradwniemczech.de/${lang}`
   const waNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '4917683425546'
   const [openLabel, closeLabel] = MENU_LABEL[lang] ?? MENU_LABEL.pl
@@ -41,7 +41,7 @@ export function PcfNav({ t, lang }: Props) {
         <div className="hidden shrink-0 items-center gap-3 lg:flex">
           <div className="flex items-center gap-1 rounded-lg border border-white/15 px-2 py-1.5">
             {([['pl','pl'],['de','de'],['ua','ua']] as const).map(([l, code]) => (
-              <Link key={l} href={`/pcf/${l}`}
+              <Link key={l} href={`/${l}`}
                 className={`flex items-center rounded px-1.5 py-0.5 transition bg-white/10 ${lang === l ? 'ring-1 ring-[#c9a227]' : 'opacity-50 hover:opacity-90'}`}>
                 <Image src={`https://flagcdn.com/20x15/${code}.png`} alt={l.toUpperCase()} width={20} height={15} className="rounded-[2px]" />
               </Link>
@@ -60,7 +60,7 @@ export function PcfNav({ t, lang }: Props) {
         <div className="relative z-10 flex items-center gap-2 lg:hidden">
           <div className="flex items-center gap-1">
             {([['pl','pl'],['de','de'],['ua','ua']] as const).map(([l, code]) => (
-              <Link key={l} href={`/pcf/${l}`}
+              <Link key={l} href={`/${l}`}
                 className={`flex items-center rounded px-1 py-1 transition bg-white/10 ${lang === l ? 'ring-1 ring-[#c9a227]' : 'opacity-40'}`}>
                 <Image src={`https://flagcdn.com/20x15/${code}.png`} alt={l.toUpperCase()} width={20} height={15} className="rounded-[2px]" />
               </Link>

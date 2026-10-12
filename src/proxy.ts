@@ -5,19 +5,24 @@ const TP_LANGS = ['pl', 'ua']
 export function proxy(request: NextRequest) {
   const { pathname, hostname } = request.nextUrl
 
-  // PCF domain → zawsze idzie na /pcf/
+  // PCF domain → serwujemy pliki z /pcf/, ale publiczny URL ma być czysty (bez /pcf/)
   // (pathname === '/' jest obsługiwane przez next.config.ts redirects() —
   // to daje absolutny Location header, którego wymagają crawlery typu FB)
   if (hostname === 'finansewniemczech.de' || hostname === 'www.finansewniemczech.de') {
-    if (!pathname.startsWith('/pcf') && pathname !== '/') {
-      return NextResponse.redirect(new URL('/pcf/pl', request.url))
+    // Stary indeksowany URL z /pcf/ → trwałe przekierowanie na czysty URL (SEO)
+    if (pathname.startsWith('/pcf')) {
+      const clean = pathname.replace(/^\/pcf/, '') || '/pl'
+      return NextResponse.redirect(new URL(clean, request.url), 308)
     }
-    return
+    if (pathname === '/' || pathname.startsWith('/admin') || pathname.startsWith('/api')) return
+    // Czysty URL → wewnętrznie serwuj z folderu /pcf/ (bez zmiany adresu w przeglądarce)
+    return NextResponse.rewrite(new URL(`/pcf${pathname}`, request.url))
   }
 
-  // Ktoś wszedł na /pcf/ pod domeną TaniPrad → zawsze przenieś na domenę PCF (SEO: unikamy duplicate content)
+  // Ktoś wszedł na /pcf/ pod domeną TaniPrad → zawsze przenieś na domenę PCF (czysty URL, bez /pcf/)
   if (pathname.startsWith('/pcf')) {
-    const target = new URL(pathname, 'https://www.finansewniemczech.de')
+    const clean = pathname.replace(/^\/pcf/, '') || '/pl'
+    const target = new URL(clean, 'https://www.finansewniemczech.de')
     target.search = request.nextUrl.search
     return NextResponse.redirect(target, 308)
   }

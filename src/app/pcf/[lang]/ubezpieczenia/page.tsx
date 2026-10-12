@@ -19,12 +19,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     keywords: ['ubezpieczenie KFZ Niemcy', 'ubezpieczenie na życie Niemcy', 'ubezpieczenie na zęby Niemcy', 'ubezpieczenie zdrowotne Polak Niemcy'],
     alternates: {
-      canonical: `https://finansewniemczech.de/pcf/${lang}/ubezpieczenia`,
+      canonical: `https://finansewniemczech.de/${lang}/ubezpieczenia`,
     },
     openGraph: {
       title,
       description,
-      url: `https://finansewniemczech.de/pcf/${lang}/ubezpieczenia`,
+      url: `https://finansewniemczech.de/${lang}/ubezpieczenia`,
       siteName: 'Polskie Centrum Finansowe w Niemczech',
       locale: lang === 'ua' ? 'uk_UA' : lang === 'de' ? 'de_DE' : 'pl_PL',
       type: 'website',

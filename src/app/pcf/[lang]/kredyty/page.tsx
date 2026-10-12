@@ -19,12 +19,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     keywords: ['kredyt Niemcy Polak', 'kredyt hipoteczny Niemcy', 'Bausparkasse po polsku', 'finansowanie auta Niemcy'],
     alternates: {
-      canonical: `https://finansewniemczech.de/pcf/${lang}/kredyty`,
+      canonical: `https://finansewniemczech.de/${lang}/kredyty`,
     },
     openGraph: {
       title,
       description,
-      url: `https://finansewniemczech.de/pcf/${lang}/kredyty`,
+      url: `https://finansewniemczech.de/${lang}/kredyty`,
       siteName: 'Polskie Centrum Finansowe w Niemczech',
       locale: lang === 'ua' ? 'uk_UA' : lang === 'de' ? 'de_DE' : 'pl_PL',
       type: 'website',

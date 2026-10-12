@@ -18,12 +18,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: {
-      canonical: `https://finansewniemczech.de/pcf/${lang}/faq`,
+      canonical: `https://finansewniemczech.de/${lang}/faq`,
     },
     openGraph: {
       title,
       description,
-      url: `https://finansewniemczech.de/pcf/${lang}/faq`,
+      url: `https://finansewniemczech.de/${lang}/faq`,
       siteName: 'Polskie Centrum Finansowe w Niemczech',
       locale: lang === 'ua' ? 'uk_UA' : lang === 'de' ? 'de_DE' : 'pl_PL',
       type: 'website',

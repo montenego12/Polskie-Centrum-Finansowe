@@ -9,8 +9,8 @@ export function Footer({ t, lang }: { t: Translations['footer']; lang: Lang }) {
         <div className="flex flex-wrap gap-5">
           <a href="https://www.facebook.com/groups/pracawniemczech" target="_blank" rel="noopener noreferrer" className="text-xs text-white/30 transition hover:text-gold">📘 {t.fb1}</a>
           <a href="https://www.facebook.com/CentrumUbezpieczeniow/" target="_blank" rel="noopener noreferrer" className="text-xs text-white/30 transition hover:text-gold">📘 {t.fb2}</a>
-          <a href={`https://finansewniemczech.de/pcf/${pcfLang}/polityka-prywatnosci`} className="text-xs text-white/30 transition hover:text-gold">{t.privacy}</a>
-          <a href={`https://finansewniemczech.de/pcf/${pcfLang}/impressum`} className="text-xs text-white/30 transition hover:text-gold">{t.impressum}</a>
+          <a href={`https://finansewniemczech.de/${pcfLang}/polityka-prywatnosci`} className="text-xs text-white/30 transition hover:text-gold">{t.privacy}</a>
+          <a href={`https://finansewniemczech.de/${pcfLang}/impressum`} className="text-xs text-white/30 transition hover:text-gold">{t.impressum}</a>
         </div>
       </div>
     </footer>

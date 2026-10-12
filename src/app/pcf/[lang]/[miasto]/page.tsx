@@ -45,12 +45,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `Steuerberatung ${city.name} polnisch`,
     ],
     alternates: {
-      canonical: `https://finansewniemczech.de/pcf/${lang}/${miasto}`,
+      canonical: `https://finansewniemczech.de/${lang}/${miasto}`,
     },
     openGraph: {
       title: `Doradztwo finansowe po polsku ${city.locative}`,
       description: `Ubezpieczenia KFZ, podatki, ubezpieczenie na życie — profesjonalne doradztwo ${city.locative}.`,
-      url: `https://finansewniemczech.de/pcf/${lang}/${miasto}`,
+      url: `https://finansewniemczech.de/${lang}/${miasto}`,
       siteName: 'Polskie Centrum Finansowe w Niemczech',
       type: 'website',
     },
@@ -155,7 +155,7 @@ export default async function CityPage({ params }: Props) {
   if (!city) notFound()
 
   const t = getPcfTranslations(lang)
-  const base = `/pcf/${lang}`
+  const base = `/${lang}`
   const displayName = city.namePolish ?? city.name
   const waNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '4917683425546'
   const waMsg = encodeURIComponent(`Dzień dobry! Szukam doradcy finansowego ${city.locative}. Chciałbym umówić bezpłatną konsultację.`)
@@ -165,7 +165,7 @@ export default async function CityPage({ params }: Props) {
     '@type': 'FinancialService',
     name: `Polskie Centrum Finansowe — ${displayName}`,
     description: `Doradztwo finansowe po polsku ${city.locative}. Ubezpieczenia KFZ, na życie, zęby, rozliczenie podatkowe.`,
-    url: `https://finansewniemczech.de/pcf/pl/${miasto}`,
+    url: `https://finansewniemczech.de/pl/${miasto}`,
     telephone: '+4917683425546',
     email: 'patryk.kuk@pm.me',
     address: {

@@ -70,12 +70,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     keywords: ['inwestycje Niemcy po polsku', 'emerytura Niemcy Polak', 'Riester Rente po polsku', 'fundusze inwestycyjne Niemcy'],
     alternates: {
-      canonical: `https://finansewniemczech.de/pcf/${lang}/inwestycje`,
+      canonical: `https://finansewniemczech.de/${lang}/inwestycje`,
     },
     openGraph: {
       title,
       description,
-      url: `https://finansewniemczech.de/pcf/${lang}/inwestycje`,
+      url: `https://finansewniemczech.de/${lang}/inwestycje`,
       siteName: 'Polskie Centrum Finansowe w Niemczech',
       locale: lang === 'ua' ? 'uk_UA' : lang === 'de' ? 'de_DE' : 'pl_PL',
       type: 'website',

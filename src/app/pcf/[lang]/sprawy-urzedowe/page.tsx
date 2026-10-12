@@ -70,12 +70,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     keywords: ['Kindergeld po polsku', 'Elterngeld Niemcy Polak', 'sprawy urzędowe Niemcy', 'DRV emerytura Niemcy', 'Wohngeld po polsku'],
     alternates: {
-      canonical: `https://finansewniemczech.de/pcf/${lang}/sprawy-urzedowe`,
+      canonical: `https://finansewniemczech.de/${lang}/sprawy-urzedowe`,
     },
     openGraph: {
       title,
       description,
-      url: `https://finansewniemczech.de/pcf/${lang}/sprawy-urzedowe`,
+      url: `https://finansewniemczech.de/${lang}/sprawy-urzedowe`,
       siteName: 'Polskie Centrum Finansowe w Niemczech',
       locale: lang === 'ua' ? 'uk_UA' : lang === 'de' ? 'de_DE' : 'pl_PL',
       type: 'website',

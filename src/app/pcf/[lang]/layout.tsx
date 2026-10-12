@@ -17,17 +17,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t.meta.title,
     description: t.meta.description,
     alternates: {
-      canonical: `https://finansewniemczech.de/pcf/${lang}`,
+      canonical: `https://finansewniemczech.de/${lang}`,
       languages: {
-        'pl': 'https://finansewniemczech.de/pcf/pl',
-        'uk': 'https://finansewniemczech.de/pcf/ua',
-        'x-default': 'https://finansewniemczech.de/pcf/pl',
+        'pl': 'https://finansewniemczech.de/pl',
+        'uk': 'https://finansewniemczech.de/ua',
+        'x-default': 'https://finansewniemczech.de/pl',
       },
     },
     openGraph: {
       title: t.meta.title,
       description: t.meta.description,
-      url: `https://finansewniemczech.de/pcf/${lang}`,
+      url: `https://finansewniemczech.de/${lang}`,
       siteName: 'Polskie Centrum Finansowe w Niemczech',
       locale: lang === 'ua' ? 'uk_UA' : 'pl_PL',
       type: 'website',

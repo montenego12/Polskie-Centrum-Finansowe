@@ -36,12 +36,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'rozliczenie podatkowe Niemcy po polsku', 'Finanzamt po polsku', 'podatek Niemcy Polacy',
     ],
     alternates: {
-      canonical: `https://finansewniemczech.de/pcf/${lang}/rozliczenie-podatkowe`,
+      canonical: `https://finansewniemczech.de/${lang}/rozliczenie-podatkowe`,
     },
     openGraph: {
       title,
       description,
-      url: `https://finansewniemczech.de/pcf/${lang}/rozliczenie-podatkowe`,
+      url: `https://finansewniemczech.de/${lang}/rozliczenie-podatkowe`,
       siteName: 'Polskie Centrum Finansowe w Niemczech',
       locale: lang === 'ua' ? 'uk_UA' : lang === 'de' ? 'de_DE' : 'pl_PL',
       type: 'website',

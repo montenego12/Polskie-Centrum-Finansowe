@@ -58,12 +58,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     keywords: ['konto bankowe Niemcy', 'konto bankowe Niemcy Polak', 'Deutsche Bank po polsku', 'Girokonto Niemcy'],
     alternates: {
-      canonical: `https://finansewniemczech.de/pcf/${lang}/bankowosc`,
+      canonical: `https://finansewniemczech.de/${lang}/bankowosc`,
     },
     openGraph: {
       title,
       description,
-      url: `https://finansewniemczech.de/pcf/${lang}/bankowosc`,
+      url: `https://finansewniemczech.de/${lang}/bankowosc`,
       siteName: 'Polskie Centrum Finansowe w Niemczech',
       locale: lang === 'ua' ? 'uk_UA' : lang === 'de' ? 'de_DE' : 'pl_PL',
       type: 'website',

@@ -58,12 +58,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     keywords: ['Bausparkasse po polsku', 'kasa budowlana Niemcy', 'Bausparvertrag Polak', 'oszczędzanie na mieszkanie Niemcy'],
     alternates: {
-      canonical: `https://finansewniemczech.de/pcf/${lang}/bausparkasse`,
+      canonical: `https://finansewniemczech.de/${lang}/bausparkasse`,
     },
     openGraph: {
       title,
       description,
-      url: `https://finansewniemczech.de/pcf/${lang}/bausparkasse`,
+      url: `https://finansewniemczech.de/${lang}/bausparkasse`,
       siteName: 'Polskie Centrum Finansowe w Niemczech',
       locale: lang === 'ua' ? 'uk_UA' : lang === 'de' ? 'de_DE' : 'pl_PL',
       type: 'website',

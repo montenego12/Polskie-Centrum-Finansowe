@@ -31,7 +31,7 @@ export function PcfFaqAccordion({ t, lang, preview = false }: Props) {
         </div>
         {preview && (
           <div className="mt-8 text-center">
-            <a href={`/pcf/${lang}/faq`} className="text-sm font-bold text-[#c9a227] underline underline-offset-4 hover:text-white">{t.more}</a>
+            <a href={`/${lang}/faq`} className="text-sm font-bold text-[#c9a227] underline underline-offset-4 hover:text-white">{t.more}</a>
           </div>
         )}
       </div>

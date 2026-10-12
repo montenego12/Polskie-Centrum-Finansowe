@@ -4,7 +4,7 @@ import type { PcfTranslations, Lang } from '@/lib/i18n/pcf'
 interface Props { t: PcfTranslations['footer']; lang: Lang }
 
 export function PcfFooter({ t, lang }: Props) {
-  const base = `/pcf/${lang}`
+  const base = `/${lang}`
   return (
     <footer className="bg-black px-6 py-12 md:px-12">
       <div className="mx-auto max-w-6xl">
@@ -30,7 +30,7 @@ export function PcfFooter({ t, lang }: Props) {
               <li><Link href={`${base}/faq`} className="text-xs text-gray-400 hover:text-white transition">FAQ</Link></li>
               <li><Link href={`${base}/polityka-prywatnosci`} className="text-xs text-gray-400 hover:text-white transition">{t.privacy}</Link></li>
               <li><Link href={`${base}/impressum`} className="text-xs text-gray-400 hover:text-white transition">{t.impressum}</Link></li>
-              <li><Link href={`/${lang}`} className="text-xs font-bold text-[#c9a227] hover:text-white transition">{t.switchTo}</Link></li>
+              <li><Link href={`https://tanipradwniemczech.de/${lang}`} className="text-xs font-bold text-[#c9a227] hover:text-white transition">{t.switchTo}</Link></li>
             </ul>
           </div>
         </div>
@@ -38,7 +38,7 @@ export function PcfFooter({ t, lang }: Props) {
           <p className="text-xs text-gray-600">{t.rights}</p>
           <div className="flex items-center gap-2">
             {(['pl', 'de', 'ua'] as const).filter(l => l !== lang).map(l => (
-              <Link key={l} href={`/pcf/${l}`} className="text-xs font-bold text-gray-600 hover:text-[#c9a227] transition">
+              <Link key={l} href={`/${l}`} className="text-xs font-bold text-gray-600 hover:text-[#c9a227] transition">
                 {l.toUpperCase()}
               </Link>
             ))}

@@ -17,12 +17,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: {
-      canonical: `https://finansewniemczech.de/pcf/${lang}/blog`,
+      canonical: `https://finansewniemczech.de/${lang}/blog`,
     },
     openGraph: {
       title,
       description,
-      url: `https://finansewniemczech.de/pcf/${lang}/blog`,
+      url: `https://finansewniemczech.de/${lang}/blog`,
       siteName: 'Polskie Centrum Finansowe w Niemczech',
       locale: lang === 'ua' ? 'uk_UA' : lang === 'de' ? 'de_DE' : 'pl_PL',
       type: 'website',
@@ -40,7 +40,7 @@ export default async function BlogPage({ params }: Props) {
     <>
       <PcfNav t={t.nav} lang={lang} />
       <main className="mx-auto min-h-[60vh] max-w-6xl px-6 pb-16 pt-10 md:px-12">
-        <div id="soro-blog" />
+        <div id="soro-blog" className="rounded-2xl bg-white p-6 text-black md:p-10" />
         <Script src="https://app.trysoro.com/api/embed/870be721-8df0-491c-8f89-7f4535af3035" strategy="afterInteractive" />
       </main>
       <PcfFooter t={t.footer} lang={lang} />

@@ -32,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const pcfCoreUrls: MetadataRoute.Sitemap = pcfLangs.flatMap(lang =>
     pcfCorePaths.map(path => ({
-      url: `${pcfBase}/pcf/${lang}${path}`,
+      url: `${pcfBase}/${lang}${path}`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: path === '' ? 0.9 : 0.7,
@@ -40,7 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   )
 
   const cityUrls: MetadataRoute.Sitemap = GERMAN_CITIES.map(city => ({
-    url: `${pcfBase}/pcf/pl/${city.slug}`,
+    url: `${pcfBase}/pl/${city.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: city.slug === 'magdeburg' ? 0.9 : 0.7,

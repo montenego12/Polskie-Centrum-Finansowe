@@ -19,12 +19,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     keywords: ['doradca finansowy Niemcy po polsku', 'Patryk Kukliński', 'Polskie Centrum Finansowe Magdeburg'],
     alternates: {
-      canonical: `https://finansewniemczech.de/pcf/${lang}/o-nas`,
+      canonical: `https://finansewniemczech.de/${lang}/o-nas`,
     },
     openGraph: {
       title,
       description,
-      url: `https://finansewniemczech.de/pcf/${lang}/o-nas`,
+      url: `https://finansewniemczech.de/${lang}/o-nas`,
       siteName: 'Polskie Centrum Finansowe w Niemczech',
       locale: lang === 'ua' ? 'uk_UA' : lang === 'de' ? 'de_DE' : 'pl_PL',
       type: 'website',
