@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { GERMAN_CITIES } from '@/lib/pcf-cities'
+import { PCF_ARTICLES } from '@/lib/pcf-articles'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const tpBase = 'https://tanipradwniemczech.de'
@@ -53,5 +54,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: city.slug === 'magdeburg' ? 0.9 : 0.7,
   }))
 
-  return [...tpUrls, ...pcfCoreUrls, ...pcfBlogUrls, ...cityUrls]
+  const articleUrls: MetadataRoute.Sitemap = PCF_ARTICLES.map(article => ({
+    url: `${pcfBase}/pl/blog/${article.slug}`,
+    lastModified: new Date(article.publishDate),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
+
+  return [...tpUrls, ...pcfCoreUrls, ...pcfBlogUrls, ...cityUrls, ...articleUrls]
 }

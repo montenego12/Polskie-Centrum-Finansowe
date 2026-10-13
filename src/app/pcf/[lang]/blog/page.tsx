@@ -1,8 +1,10 @@
 import { getPcfTranslations, VALID_PCF_LANGS, type Lang } from '@/lib/i18n/pcf'
 import { notFound } from 'next/navigation'
+import Link from 'next/link'
 import { PcfNav } from '@/components/pcf/Nav'
 import { PcfFooter } from '@/components/pcf/Footer'
 import { StickyWhatsApp } from '@/components/StickyWhatsApp'
+import { PCF_ARTICLES } from '@/lib/pcf-articles'
 import Script from 'next/script'
 import type { Metadata } from 'next'
 
@@ -40,6 +42,18 @@ export default async function BlogPage({ params }: Props) {
     <>
       <PcfNav t={t.nav} lang={lang} />
       <main className="mx-auto min-h-[60vh] max-w-6xl px-6 pb-16 pt-10 md:px-12">
+        {PCF_ARTICLES.length > 0 && (
+          <div className="mb-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {PCF_ARTICLES.map(article => (
+              <Link key={article.slug} href={`/${lang}/blog/${article.slug}`}
+                className="group flex flex-col rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-[#c9a227]/40">
+                <p className="mb-2 text-sm font-black text-white group-hover:text-[#c9a227] transition">{article.title}</p>
+                <p className="text-xs leading-relaxed text-white/50 flex-1">{article.excerpt}</p>
+                <p className="mt-3 text-[10px] font-bold uppercase tracking-wide text-[#c9a227]">Czytaj więcej →</p>
+              </Link>
+            ))}
+          </div>
+        )}
         <div id="soro-blog" className="rounded-2xl bg-white p-6 text-black md:p-10" />
         <Script src="https://app.trysoro.com/api/embed/870be721-8df0-491c-8f89-7f4535af3035" strategy="afterInteractive" />
       </main>
