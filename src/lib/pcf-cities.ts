@@ -51,7 +51,9 @@ export const GERMAN_CITIES: CityData[] = [
   { name: 'Hamm', slug: 'hamm', state: 'Nordrhein-Westfalen', locative: 'w Hamm' },
   { name: 'Saarbrücken', slug: 'saarbruecken', state: 'Saarland', locative: 'w Saarbrücken' },
   { name: 'Potsdam', slug: 'potsdam', state: 'Brandenburg', locative: 'w Poczdamie', namePolish: 'Poczdam' },
+  { name: 'Ludwigshafen am Rhein', slug: 'ludwigshafen', state: 'Rheinland-Pfalz', locative: 'w Ludwigshafen' },
   { name: 'Mülheim an der Ruhr', slug: 'muelheim', state: 'Nordrhein-Westfalen', locative: 'w Mülheim' },
+  { name: 'Darmstadt', slug: 'darmstadt', state: 'Hessen', locative: 'w Darmstadt' },
   { name: 'Oldenburg', slug: 'oldenburg', state: 'Niedersachsen', locative: 'w Oldenburgu' },
   { name: 'Leverkusen', slug: 'leverkusen', state: 'Nordrhein-Westfalen', locative: 'w Leverkusen' },
   { name: 'Osnabrück', slug: 'osnabrueck', state: 'Niedersachsen', locative: 'w Osnabrück' },
@@ -69,3 +71,28 @@ export function getCityBySlug(slug: string): CityData | undefined {
 }
 
 export const CITY_SLUGS = GERMAN_CITIES.map(c => c.slug)
+
+// Grunderwerbsteuer (podatek od zakupu nieruchomości) wg landu, stan na 2026.
+// Źródło: publiczne zestawienia stawek podatkowych (stawki ustalane przez landy, zmieniają się rzadko).
+const GRUNDERWERBSTEUER: Record<string, number> = {
+  'Bayern': 3.5,
+  'Baden-Württemberg': 5.0,
+  'Niedersachsen': 5.0,
+  'Rheinland-Pfalz': 5.0,
+  'Sachsen-Anhalt': 5.0,
+  'Thüringen': 5.0,
+  'Bremen': 5.5,
+  'Hamburg': 5.5,
+  'Sachsen': 5.5,
+  'Berlin': 6.0,
+  'Hessen': 6.0,
+  'Mecklenburg-Vorpommern': 6.0,
+  'Brandenburg': 6.5,
+  'Nordrhein-Westfalen': 6.5,
+  'Saarland': 6.5,
+  'Schleswig-Holstein': 6.5,
+}
+
+export function getGrunderwerbsteuer(state: string): number {
+  return GRUNDERWERBSTEUER[state] ?? 5.0
+}

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import { getPcfTranslations, VALID_PCF_LANGS, type Lang } from '@/lib/i18n/pcf'
-import { GERMAN_CITIES, getCityBySlug, CITY_SLUGS } from '@/lib/pcf-cities'
+import { GERMAN_CITIES, getCityBySlug, CITY_SLUGS, getGrunderwerbsteuer, type CityData } from '@/lib/pcf-cities'
 import { PcfNav } from '@/components/pcf/Nav'
 import { PcfFooter } from '@/components/pcf/Footer'
 import { StickyWhatsApp } from '@/components/StickyWhatsApp'
@@ -62,7 +62,7 @@ const SERVICES = [
     image: 'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&h=320&fit=crop',
     title: 'Ubezpieczenie KFZ',
     german: 'Kfz-Versicherung',
-    desc: 'OC, AC, pełne ubezpieczenie pojazdu. Porównujemy oferty wielu towarzystw — wybierasz najlepszą cenę.',
+    desc: (city: CityData) => `Twoja składka OC/AC zależy m.in. od Regionalklasy przypisanej do ${city.namePolish ?? city.name} — sprawdzimy to dla Ciebie za darmo i porównamy oferty wielu towarzystw.`,
     href: '/ubezpieczenia',
     badge: 'KFZ',
   },
@@ -102,7 +102,7 @@ const SERVICES = [
     image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=320&fit=crop',
     title: 'Kredyt i Bausparkasse',
     german: 'Immobilienkredit · Bausparen',
-    desc: 'Kredyt hipoteczny na dom lub mieszkanie w Niemczech. Bausparkasse — oszczędzasz i budujesz.',
+    desc: (city: CityData) => `Planujesz zakup mieszkania ${city.locative}? Podatek od zakupu nieruchomości (Grunderwerbsteuer) w ${city.state} wynosi ${getGrunderwerbsteuer(city.state).toLocaleString('pl-PL', { minimumFractionDigits: 1 })}% wartości nieruchomości — uwzględnimy to przy planowaniu finansowania.`,
     href: '/kredyty',
     badge: 'KREDYT',
   },
@@ -255,7 +255,7 @@ export default async function CityPage({ params }: Props) {
                 <div className="flex flex-1 flex-col p-5">
                   <p className="mb-0.5 text-sm font-black text-gray-900 group-hover:text-[#c9a227] transition">{s.title}</p>
                   <p className="mb-3 text-[10px] font-medium text-gray-400">{s.german}</p>
-                  <p className="text-xs leading-relaxed text-gray-600 flex-1">{s.desc}</p>
+                  <p className="text-xs leading-relaxed text-gray-600 flex-1">{typeof s.desc === 'function' ? s.desc(city) : s.desc}</p>
                   <p className="mt-3 text-[10px] font-bold uppercase tracking-wide text-[#c9a227]">Dowiedz się więcej →</p>
                 </div>
               </Link>
