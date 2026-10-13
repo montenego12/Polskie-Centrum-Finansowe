@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { getPcfTranslations, VALID_PCF_LANGS, type Lang } from '@/lib/i18n/pcf'
 import { getArticleBySlug, ARTICLE_SLUGS } from '@/lib/pcf-articles'
 import { PcfNav } from '@/components/pcf/Nav'
@@ -36,6 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: 'Polskie Centrum Finansowe w Niemczech',
       type: 'article',
       publishedTime: article.publishDate,
+      images: [{ url: article.coverImage }],
     },
   }
 }
@@ -71,9 +73,12 @@ export default async function ArticlePage({ params }: Props) {
             <span className="text-gray-400">{article.title}</span>
           </p>
           <h1 className="mb-3 text-3xl font-black leading-tight text-gray-900 md:text-4xl">{article.title}</h1>
-          <p className="mb-10 text-xs text-gray-400">
+          <p className="mb-6 text-xs text-gray-400">
             {new Date(article.publishDate).toLocaleDateString('pl-PL', { day: 'numeric', month: 'long', year: 'numeric' })}
           </p>
+          <div className="relative mb-10 h-56 w-full overflow-hidden rounded-2xl md:h-80">
+            <Image src={article.coverImage} alt={article.title} fill priority className="object-cover" sizes="(max-width: 768px) 100vw, 768px" />
+          </div>
           <PcfArticleBody sections={article.sections} />
         </div>
       </main>

@@ -10,6 +10,7 @@ export interface ArticleData {
   keywords: string[]
   publishDate: string // ISO date, 'YYYY-MM-DD'
   excerpt: string
+  coverImage: string
   sections: ArticleSection[]
 }
 
@@ -21,6 +22,7 @@ export const PCF_ARTICLES: ArticleData[] = [
     keywords: ['kredyty w niemczech po polsku', 'kredyt niemcy polak', 'kredyt hipoteczny niemcy', 'kredyt gotówkowy niemcy dla polaka'],
     publishDate: '2026-10-13',
     excerpt: 'Podpisujesz niemiecką umowę kredytową, widzisz ratę i oprocentowanie, ale nie masz pewności ile naprawdę zapłacisz? Sprawdź, co bank ocenia, jakie dokumenty przygotować i na co zwrócić uwagę przed podpisaniem.',
+    coverImage: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&h=500&fit=crop',
     sections: [
       {
         paragraphs: [

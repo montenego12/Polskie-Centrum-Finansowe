@@ -1,6 +1,7 @@
 import { getPcfTranslations, VALID_PCF_LANGS, type Lang } from '@/lib/i18n/pcf'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { PcfNav } from '@/components/pcf/Nav'
 import { PcfFooter } from '@/components/pcf/Footer'
 import { StickyWhatsApp } from '@/components/StickyWhatsApp'
@@ -46,10 +47,15 @@ export default async function BlogPage({ params }: Props) {
           <div className="mb-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {PCF_ARTICLES.map(article => (
               <Link key={article.slug} href={`/${lang}/blog/${article.slug}`}
-                className="group flex flex-col rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-[#c9a227]/40">
-                <p className="mb-2 text-sm font-black text-white group-hover:text-[#c9a227] transition">{article.title}</p>
-                <p className="text-xs leading-relaxed text-white/50 flex-1">{article.excerpt}</p>
-                <p className="mt-3 text-[10px] font-bold uppercase tracking-wide text-[#c9a227]">Czytaj więcej →</p>
+                className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition hover:border-[#c9a227]/40">
+                <div className="relative h-32 w-full">
+                  <Image src={article.coverImage} alt={article.title} fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
+                </div>
+                <div className="flex flex-1 flex-col p-5">
+                  <p className="mb-2 text-sm font-black text-white group-hover:text-[#c9a227] transition">{article.title}</p>
+                  <p className="text-xs leading-relaxed text-white/50 flex-1">{article.excerpt}</p>
+                  <p className="mt-3 text-[10px] font-bold uppercase tracking-wide text-[#c9a227]">Czytaj więcej →</p>
+                </div>
               </Link>
             ))}
           </div>
