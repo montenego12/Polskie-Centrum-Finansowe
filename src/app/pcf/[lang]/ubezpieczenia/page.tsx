@@ -11,7 +11,7 @@ interface Props { params: Promise<{ lang: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params
-  const title = 'Ubezpieczenia w Niemczech po polsku — KFZ, życie, zdrowie, zęby | PCF'
+  const title = 'Ubezpieczenia w Niemczech po polsku — KFZ, życie, zdrowie, zęby | Finanse w Niemczech'
   const description = 'Ubezpieczenie KFZ, na życie, zdrowotne, na zęby, od wypadków w Niemczech. Bezpłatne doradztwo po polsku. Porównujemy oferty Allianz, Generali, Advocard i innych.'
   return {
     metadataBase: new URL('https://finansewniemczech.de'),

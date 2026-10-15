@@ -11,7 +11,7 @@ interface Props { params: Promise<{ lang: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params
-  const title = 'O mnie — Patryk Kukliński, doradca finansowy w Niemczech | PCF'
+  const title = 'O mnie — Patryk Kukliński, doradca finansowy w Niemczech | Finanse w Niemczech'
   const description = 'Poznaj Patryka Kuklińskiego — doradcę finansowego Polskiego Centrum Finansowego w Magdeburgu. Pomagam Polakom w Niemczech od lat, po polsku, bez ukrytych kosztów.'
   return {
     metadataBase: new URL('https://finansewniemczech.de'),

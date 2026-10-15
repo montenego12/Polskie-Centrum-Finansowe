@@ -11,7 +11,7 @@ interface Props { params: Promise<{ lang: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params
-  const title = 'FAQ — Najczęstsze pytania o finanse w Niemczech | PCF'
+  const title = 'FAQ — Najczęstsze pytania o finanse w Niemczech | Finanse w Niemczech'
   const description = 'Odpowiedzi na najczęstsze pytania o ubezpieczenia, kredyty, podatki i finanse w Niemczech. Doradztwo po polsku — bezpłatnie.'
   return {
     metadataBase: new URL('https://finansewniemczech.de'),

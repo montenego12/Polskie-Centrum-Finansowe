@@ -62,7 +62,7 @@ interface Props { params: Promise<{ lang: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params
-  const title = 'Sprawy urzędowe w Niemczech po polsku — Kindergeld, Elterngeld, DRV | PCF'
+  const title = 'Sprawy urzędowe w Niemczech po polsku — Kindergeld, Elterngeld, DRV | Finanse w Niemczech'
   const description = 'Pomoc z niemiecką biurokracją po polsku — Kindergeld, Elterngeld, Wohngeld, DRV, Finanzamt, Anmeldung. Bezpłatne doradztwo, bez barier językowych.'
   return {
     metadataBase: new URL('https://finansewniemczech.de'),

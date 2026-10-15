@@ -11,7 +11,7 @@ const MENU_LABEL = { pl: ['Otwórz menu', 'Zamknij menu'], ua: ['Відкрит�
 export function PcfNav({ t, lang }: Props) {
   const [open, setOpen] = useState(false)
   const base = `/${lang}`
-  const tpBase = `https://tanipradwniemczech.de/${lang}`
+  const tpBase = `https://www.tanipradwniemczech.de/${lang}`
   const waNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '4917683425546'
   const [openLabel, closeLabel] = MENU_LABEL[lang] ?? MENU_LABEL.pl
 

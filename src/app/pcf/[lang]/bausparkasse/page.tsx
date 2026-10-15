@@ -50,7 +50,7 @@ interface Props { params: Promise<{ lang: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params
-  const title = 'Bausparkasse w Niemczech po polsku — kasa budowlana | PCF'
+  const title = 'Bausparkasse w Niemczech po polsku — kasa budowlana | Finanse w Niemczech'
   const description = 'Oszczędzanie na własne mieszkanie w Niemczech — Bausparvertrag, dopłaty od państwa, gwarantowane oprocentowanie kredytu. Doradztwo po polsku, współpraca z Badenia.'
   return {
     metadataBase: new URL('https://finansewniemczech.de'),

@@ -62,7 +62,7 @@ interface Props { params: Promise<{ lang: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params
-  const title = 'Inwestycje i emerytura w Niemczech po polsku | PCF'
+  const title = 'Inwestycje i emerytura w Niemczech po polsku | Finanse w Niemczech'
   const description = 'Fundusze inwestycyjne, prywatna emerytura z dofinansowaniem od państwa (Riester, Rürup, bAV) w Niemczech. Bezpłatne doradztwo po polsku, dopasowane do Twojej sytuacji.'
   return {
     metadataBase: new URL('https://finansewniemczech.de'),

@@ -10,15 +10,15 @@ interface Props { params: Promise<{ lang: string }> }
 
 const TAX_META: Record<Lang, { title: string; description: string }> = {
   pl: {
-    title: 'Rozliczenie Podatkowe w Niemczech po Polsku | Steuererklärung 2025 | PCF',
+    title: 'Rozliczenie Podatkowe w Niemczech po Polsku | Steuererklärung 2025 | Finanse w Niemczech',
     description: 'Rozliczenie podatkowe w Niemczech po polsku — średnio 800–2500 € zwrotu. Pomagamy złożyć Steuererklärung za 2022, 2023, 2024 i 2025. Bezpłatna wycena. Magdeburg i całe Niemcy.',
   },
   ua: {
-    title: 'Податкова декларація в Німеччині українською | Steuererklärung 2025 | PCF',
+    title: 'Податкова декларація в Німеччині українською | Steuererklärung 2025 | Finanse w Niemczech',
     description: 'Податкова декларація у Німеччині українською — в середньому 800–2500 € повернення. Подаємо Steuererklärung за 2022, 2023, 2024 і 2025 роки. Безкоштовна оцінка. Магдебург і вся Німеччина.',
   },
   de: {
-    title: 'Steuererklärung in Deutschland auf Polnisch/Ukrainisch | 2025 | PCF',
+    title: 'Steuererklärung in Deutschland auf Polnisch/Ukrainisch | 2025 | Finanse w Niemczech',
     description: 'Steuererklärung in Deutschland — durchschnittlich 800–2500 € Rückerstattung. Wir helfen bei der Erklärung für 2022, 2023, 2024 und 2025. Kostenlose Einschätzung. Magdeburg und ganz Deutschland.',
   },
 }

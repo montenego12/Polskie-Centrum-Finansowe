@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const city = getCityBySlug(miasto)
   if (!city) return {}
   const displayName = city.namePolish ?? city.name
-  const title = `Ubezpieczenia KFZ, podatki, ubezpieczenie na życie ${displayName} — Polak w Niemczech | PCF`
+  const title = `Ubezpieczenia KFZ, podatki, ubezpieczenie na życie ${displayName} — Polak w Niemczech | Finanse w Niemczech`
   const description = `Polskie Centrum Finansowe ${city.locative}. Ubezpieczenie KFZ, ubezpieczenie na życie, ubezpieczenie na zęby, rozliczenie podatkowe. Doradztwo po polsku — bezpłatna konsultacja.`
   return {
     metadataBase: new URL('https://finansewniemczech.de'),

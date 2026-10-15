@@ -50,7 +50,7 @@ interface Props { params: Promise<{ lang: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params
-  const title = 'Konto bankowe w Niemczech po polsku — Deutsche Bank | PCF'
+  const title = 'Konto bankowe w Niemczech po polsku — Deutsche Bank | Finanse w Niemczech'
   const description = 'Bezpłatne konto bankowe w Niemczech, karta kredytowa, oszczędności. Otwieramy konto szybko i bez kolejek, po polsku. Współpraca z Deutsche Bank.'
   return {
     metadataBase: new URL('https://finansewniemczech.de'),

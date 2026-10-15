@@ -11,7 +11,7 @@ interface Props { params: Promise<{ lang: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params
-  const title = 'Kredyty i finansowanie w Niemczech po polsku — hipoteka, auto, Bausparkasse | PCF'
+  const title = 'Kredyty i finansowanie w Niemczech po polsku — hipoteka, auto, Bausparkasse | Finanse w Niemczech'
   const description = 'Kredyt gotówkowy, hipoteczny, na auto i Bausparkasse w Niemczech. Doradztwo po polsku, bezpłatnie. Santander, Deutsche Bank, Badenia i inne.'
   return {
     metadataBase: new URL('https://finansewniemczech.de'),

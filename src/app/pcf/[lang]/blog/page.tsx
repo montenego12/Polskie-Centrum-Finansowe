@@ -12,7 +12,7 @@ interface Props { params: Promise<{ lang: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params
-  const title = 'Blog — Finanse, podatki i ubezpieczenia w Niemczech | PCF'
+  const title = 'Blog — Finanse, podatki i ubezpieczenia w Niemczech | Finanse w Niemczech'
   const description = 'Praktyczne porady o finansach, podatkach, kredytach i ubezpieczeniach w Niemczech. Po polsku, od doradcy Polskiego Centrum Finansowego.'
   return {
     metadataBase: new URL('https://finansewniemczech.de'),

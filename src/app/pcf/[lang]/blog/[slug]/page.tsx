@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!article) return {}
   return {
     metadataBase: new URL('https://finansewniemczech.de'),
-    title: `${article.title} | PCF`,
+    title: `${article.title} | Finanse w Niemczech`,
     description: article.metaDescription,
     keywords: article.keywords,
     alternates: {

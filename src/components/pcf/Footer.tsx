@@ -30,7 +30,7 @@ export function PcfFooter({ t, lang }: Props) {
               <li><Link href={`${base}/faq`} className="text-xs text-gray-400 hover:text-white transition">FAQ</Link></li>
               <li><Link href={`${base}/polityka-prywatnosci`} className="text-xs text-gray-400 hover:text-white transition">{t.privacy}</Link></li>
               <li><Link href={`${base}/impressum`} className="text-xs text-gray-400 hover:text-white transition">{t.impressum}</Link></li>
-              <li><Link href={`https://tanipradwniemczech.de/${lang}`} className="text-xs font-bold text-[#c9a227] hover:text-white transition">{t.switchTo}</Link></li>
+              <li><Link href={`https://www.tanipradwniemczech.de/${lang}`} className="text-xs font-bold text-[#c9a227] hover:text-white transition">{t.switchTo}</Link></li>
             </ul>
           </div>
         </div>
